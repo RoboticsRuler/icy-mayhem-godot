@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://gmdr5se2avhr"]
+
+[ext_resource type="PackedScene" uid="uid://6t0k367x5qtw" path="res://Scenes/player.tscn" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://efqltw8plwwl" path="res://Scenes/ice.tscn" id="2_8gbba"]
+
+[node name="Main" type="Node2D" unique_id=702311018]
+
+[node name="Player" parent="." unique_id=1014737346 instance=ExtResource("1_bo1nx")]
+
+[node name="Ice" parent="." unique_id=1317599937 instance=ExtResource("2_8gbba")]
+position = Vector2(192, 256)
+rotation = 0.2617994
+
+[node name="Ice2" parent="." unique_id=639955354 instance=ExtResource("2_8gbba")]
+position = Vector2(912, 816)
+rotation = -0.5235988
+
+[node name="Ice3" parent="." unique_id=2088686029 instance=ExtResource("2_8gbba")]
+position = Vector2(-344.00006, 1311.9999)
+rotation = 1.3089969
+
+[node name="Ice4" parent="." unique_id=1368955027 instance=ExtResource("2_8gbba")]
+position = Vector2(264, 2368)
+rotation = 0.7853982
+
+[node name="Ice5" parent="." unique_id=183909672 instance=ExtResource("2_8gbba")]
+position = Vector2(1320, 2976.0002)
+rotation = 0.2617994
+
+[node name="Ice6" parent="." unique_id=1130637070 instance=ExtResource("2_8gbba")]
+position = Vector2(2536, 2976.0002)
+rotation = -0.2617994
+
+[node name="Ice7" parent="." unique_id=1080631650 instance=ExtResource("2_8gbba")]
+position = Vector2(4200, 3072)
