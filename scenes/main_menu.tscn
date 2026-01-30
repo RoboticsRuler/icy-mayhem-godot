@@ -2,11 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://dafwsey1ych76" path="res://scenes/background.tscn" id="1_rxrep"]
 [ext_resource type="Script" uid="uid://b5km2wxcksjoc" path="res://scripts/main_menu.gd" id="1_uxlcg"]
-[ext_resource type="Texture2D" uid="uid://bvcfhvoow4ma8" path="res://assets/misc/title.png" id="2_t0pl0"]
-[ext_resource type="FontFile" uid="uid://bvfplqf156sdn" path="res://assets/misc/Strange Book.otf" id="3_4i3dv"]
+[ext_resource type="FontFile" uid="uid://c4tovgvqkv3mn" path="res://assets/misc/Papernotes Sketch.ttf" id="3_wu84c"]
+[ext_resource type="FontFile" uid="uid://c2icmyk3kdg2c" path="res://assets/misc/Papernotes.ttf" id="4_8ln24"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24jsm"]
 bg_color = Color(0.260973, 0.2576, 0.46, 1)
+border_width_top = 25
+border_width_bottom = 25
+border_color = Color(0.2627451, 0.25882354, 0.45882353, 1)
 corner_radius_top_left = 40
 corner_radius_top_right = 40
 corner_radius_bottom_right = 40
@@ -42,21 +45,26 @@ script = ExtResource("1_uxlcg")
 
 [node name="Background" parent="." unique_id=465117045 instance=ExtResource("1_rxrep")]
 
-[node name="Title" type="Sprite2D" parent="." unique_id=1782992068]
-position = Vector2(1280, 350)
-texture = ExtResource("2_t0pl0")
+[node name="Label" type="Label" parent="." unique_id=241035793]
+offset_left = 635.5
+offset_top = 250.0
+offset_right = 1924.5
+offset_bottom = 479.00003
+theme_override_fonts/font = ExtResource("3_wu84c")
+theme_override_font_sizes/font_size = 250
+text = "Icy Mayhem"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1141116413]
-offset_left = 1055.0
-offset_top = 720.0
-offset_right = 1505.0
-offset_bottom = 1259.0
+offset_left = 1030.0
+offset_top = 670.0
+offset_right = 1530.0
+offset_bottom = 1209.0
 theme_override_constants/separation = 40
 
 [node name="Play" type="Button" parent="VBoxContainer" unique_id=951737699]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_4i3dv")
-theme_override_font_sizes/font_size = 120
+theme_override_fonts/font = ExtResource("4_8ln24")
+theme_override_font_sizes/font_size = 110
 theme_override_styles/normal = SubResource("StyleBoxFlat_24jsm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dxl65")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g6q5s")
@@ -65,8 +73,8 @@ text = "Play"
 
 [node name="Options" type="Button" parent="VBoxContainer" unique_id=137479204]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_4i3dv")
-theme_override_font_sizes/font_size = 120
+theme_override_fonts/font = ExtResource("4_8ln24")
+theme_override_font_sizes/font_size = 110
 theme_override_styles/normal = SubResource("StyleBoxFlat_24jsm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dxl65")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g6q5s")
@@ -75,8 +83,8 @@ text = "Options"
 
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=922443016]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_4i3dv")
-theme_override_font_sizes/font_size = 120
+theme_override_fonts/font = ExtResource("4_8ln24")
+theme_override_font_sizes/font_size = 110
 theme_override_styles/normal = SubResource("StyleBoxFlat_24jsm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dxl65")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g6q5s")

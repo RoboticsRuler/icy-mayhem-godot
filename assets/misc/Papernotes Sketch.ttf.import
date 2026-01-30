@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bvfplqf156sdn"
-path="res://.godot/imported/Strange Book.otf-309feece3f5d283418f55fca6945cb73.fontdata"
+uid="uid://c4tovgvqkv3mn"
+path="res://.godot/imported/Papernotes Sketch.ttf-6c089c72fec08353d2f7247c1dfe94c9.fontdata"
 
 [deps]
 
-source_file="res://assets/misc/Strange Book.otf"
-dest_files=["res://.godot/imported/Strange Book.otf-309feece3f5d283418f55fca6945cb73.fontdata"]
+source_file="res://assets/misc/Papernotes Sketch.ttf"
+dest_files=["res://.godot/imported/Papernotes Sketch.ttf-6c089c72fec08353d2f7247c1dfe94c9.fontdata"]
 
 [params]
 
@@ -23,7 +23,7 @@ allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false
 hinting=1
-subpixel_positioning=1
+subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
