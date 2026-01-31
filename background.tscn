@@ -28,8 +28,9 @@ offset_bottom = 1440.0
 color = Color(0.33300486, 0.34978536, 0.4395602, 1)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1951917495]
-position = Vector2(1280, 640)
+position = Vector2(1283, 690)
 rotation = 1.5707964
+scale = Vector2(1.09, 1.09)
 amount = 500
 texture = ExtResource("1_sn1xx")
 lifetime = 10.0
