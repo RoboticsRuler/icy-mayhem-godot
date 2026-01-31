@@ -25,11 +25,15 @@ scale_curve = SubResource("CurveTexture_e5hrs")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=328442120]
 offset_right = 2560.0
 offset_bottom = 1440.0
-color = Color(0.1107, 0.106, 0.2, 1)
+color = Color(0.33300486, 0.34978536, 0.4395602, 1)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1951917495]
-position = Vector2(1278, 717)
-scale = Vector2(1.1, 1.1)
-amount = 300
+position = Vector2(1283, 690)
+rotation = 1.5707964
+scale = Vector2(1.09, 1.09)
+amount = 500
 texture = ExtResource("1_xuykg")
+lifetime = 10.0
+speed_scale = 6.0
+trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_dx07j")
