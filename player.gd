@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var jump_velocity = -600
-var stability: int = 200
+var stability: int = 300
 var is_on_ground
 
 @onready var ground_detector = $"Ground Detector"
