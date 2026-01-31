@@ -14,7 +14,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	# Jump
-	if Input.is_action_just_pressed("ui_accept") and is_on_ground:
+	if Input.is_action_just_pressed("space_bar") and is_on_ground:
 		apply_central_impulse(Vector2(0, jump_velocity))
 		stability -= 40
 
@@ -32,7 +32,7 @@ func _process(_delta: float) -> void:
 
 	# Quit the game if player has no stability
 	if stability == 0:
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
 	# Clamp stability to not go over limits
 	stability = clamp(stability, 0, 100)

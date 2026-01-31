@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://do5y6uq02an1w"]
 
-[ext_resource type="PackedScene" uid="uid://dafwsey1ych76" path="res://background.tscn" id="1_rxrep"]
 [ext_resource type="Script" uid="uid://b5km2wxcksjoc" path="res://scripts/main_menu.gd" id="1_uxlcg"]
+[ext_resource type="PackedScene" uid="uid://dafwsey1ych76" path="res://scenes/background.tscn" id="2_wu84c"]
 [ext_resource type="FontFile" uid="uid://c4tovgvqkv3mn" path="res://assets/misc/Papernotes Sketch.ttf" id="3_wu84c"]
 [ext_resource type="FontFile" uid="uid://c2icmyk3kdg2c" path="res://assets/misc/Papernotes.ttf" id="4_8ln24"]
 
@@ -43,7 +43,7 @@ shadow_offset = Vector2(10, 15)
 [node name="Main Menu" type="Node2D" unique_id=14937350]
 script = ExtResource("1_uxlcg")
 
-[node name="Background" parent="." unique_id=465117045 instance=ExtResource("1_rxrep")]
+[node name="Background" parent="." unique_id=1569188693 instance=ExtResource("2_wu84c")]
 
 [node name="Label" type="Label" parent="." unique_id=241035793]
 offset_left = 635.5
