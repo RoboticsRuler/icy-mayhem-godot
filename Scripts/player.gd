@@ -14,7 +14,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	# Jump
-	if Input.is_action_just_pressed("ui_accept") and is_on_ground:
+	if Input.is_action_just_pressed("space_bar") and is_on_ground:
 		apply_central_impulse(Vector2(0, jump_velocity))
 		stability -= 50
 
