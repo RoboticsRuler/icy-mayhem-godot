@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 
 	# Rotate
 	var rotation_dir = Input.get_action_strength("left") - Input.get_action_strength("right")
+	angular_velocity = (rotation_dir * -1.5)
 
 	# Detect if player is and isn't on ground
 	if ground_detector.is_colliding():
