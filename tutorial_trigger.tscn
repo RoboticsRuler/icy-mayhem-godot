@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dneiw8unh562m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kutk1"]
+size = Vector2(128, 128)
+
+[node name="TutorialTrigger" type="Area2D" unique_id=2080396294 groups=["Tutorial Trigger"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=862687128 groups=["Tutorial Trigger"]]
+shape = SubResource("RectangleShape2D_kutk1")
