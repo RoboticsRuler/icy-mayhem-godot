@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b5ntujnpf1a4a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vc0p2"]
+size = Vector2(256, 256)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qcbrc"]
+
+[node name="Safehouse" type="Area2D" unique_id=1020140978 groups=["Safehouse"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1418355526]
+shape = SubResource("RectangleShape2D_vc0p2")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=942538935]
+scale = Vector2(256, 256)
+mesh = SubResource("BoxMesh_qcbrc")
