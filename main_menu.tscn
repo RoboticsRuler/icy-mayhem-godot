@@ -97,10 +97,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_g6q5s")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_k7a68")
 text = "Quit"
 
-[node name="Label" type="Label" parent="." unique_id=640810474]
-offset_left = 88.0
+[node name="KillCounter" type="Label" parent="." unique_id=640810474]
+offset_left = 80.0
 offset_top = 1216.0
-offset_right = 408.0
+offset_right = 400.0
 offset_bottom = 1320.0
 theme_override_fonts/font = ExtResource("4_8ln24")
 theme_override_font_sizes/font_size = 110
