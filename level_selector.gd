@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -31,4 +31,6 @@ func _on_level_2_pressed() -> void:
 
 # Play level 3
 func _on_level_3_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level_3.tscn")
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	LevelData.current_level = ("res://scenes/level_3.tscn")
