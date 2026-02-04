@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://c7j83d6vo7aho"]
 
-[ext_resource type="PackedScene" uid="uid://bhja5q7hur6cl" path="res://Scenes/player.tscn" id="1_lsmp6"]
-[ext_resource type="Script" uid="uid://qrkqnlivoaqx" path="res://Scripts/start_lvl_1.gd" id="1_xrdnt"]
-[ext_resource type="PackedScene" uid="uid://d0wie1jisp4yv" path="res://Scenes/enemy.tscn" id="2_xrdnt"]
-[ext_resource type="PackedScene" uid="uid://b5ntujnpf1a4a" path="res://Scenes/safehouse.tscn" id="3_wrinw"]
-[ext_resource type="PackedScene" uid="uid://efqltw8plwwl" path="res://Scenes/ice.tscn" id="4_chwpn"]
+[ext_resource type="PackedScene" uid="uid://bhja5q7hur6cl" path="res://scenes/player.tscn" id="1_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://d0wie1jisp4yv" path="res://scenes/enemy.tscn" id="2_xrdnt"]
+[ext_resource type="PackedScene" uid="uid://b5ntujnpf1a4a" path="res://scenes/safehouse.tscn" id="3_wrinw"]
+[ext_resource type="PackedScene" uid="uid://efqltw8plwwl" path="res://scenes/ice.tscn" id="4_chwpn"]
 [ext_resource type="Texture2D" uid="uid://beqptwo1ufhtj" path="res://assets/art/particle.png" id="5_af3po"]
-[ext_resource type="PackedScene" uid="uid://0qo2kjjhtjav" path="res://Scenes/button.tscn" id="6_uy8f0"]
-[ext_resource type="PackedScene" uid="uid://dneiw8unh562m" path="res://Scenes/tutorial_trigger.tscn" id="7_6r07y"]
+[ext_resource type="PackedScene" uid="uid://dneiw8unh562m" path="res://scenes/tutorial_trigger.tscn" id="7_6r07y"]
 
 [sub_resource type="Curve" id="Curve_8gbba"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.250318, 1), 0.0, 0.0, 0, 0, Vector2(0.748412, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -34,7 +32,6 @@ font_size = 17
 font_size = 17
 
 [node name="Level1" type="Node2D" unique_id=702311018]
-script = ExtResource("1_xrdnt")
 
 [node name="Player" parent="." unique_id=1014737346 instance=ExtResource("1_lsmp6")]
 position = Vector2(-1.9073489e-06, 48.000023)
@@ -342,15 +339,6 @@ trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_kry3j")
 
 [node name="Buttons" type="Node" parent="." unique_id=2026276513]
-
-[node name="Button" parent="Buttons" unique_id=1322701791 instance=ExtResource("6_uy8f0")]
-position = Vector2(4712, 1832)
-
-[node name="Button2" parent="Buttons" unique_id=1231779545 instance=ExtResource("6_uy8f0")]
-position = Vector2(43704, 13496)
-
-[node name="Button3" parent="Buttons" unique_id=821398629 instance=ExtResource("6_uy8f0")]
-position = Vector2(43008, 13496)
 
 [node name="Tutorials" type="Node" parent="." unique_id=651988572]
 
