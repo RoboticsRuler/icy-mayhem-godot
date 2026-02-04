@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://0qo2kjjhtjav"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0vvm8"]
+size = Vector2(80, 24)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r04n3"]
+
+[node name="Button" type="Area2D" unique_id=1322701791 groups=["Button"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2118539216]
+shape = SubResource("RectangleShape2D_0vvm8")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=243185767]
+position = Vector2(-1.1920929e-06, 4)
+scale = Vector2(63.999996, 8)
+mesh = SubResource("BoxMesh_r04n3")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=606995619]
+position = Vector2(2.3841858e-07, -4)
+scale = Vector2(48.000004, 8)
+mesh = SubResource("BoxMesh_r04n3")
