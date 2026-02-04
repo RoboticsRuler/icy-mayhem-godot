@@ -56,7 +56,7 @@ func _process(delta: float) -> void:
 func _on_head_detection_area_entered(area: Area2D) -> void:
 # Player dies if they land on their head
 	if area.is_in_group("Ice"):
-		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/game_over.tscn")
 
 # Detect if player is not on ground
 func _on_ground_detection_area_exited(area: Area2D) -> void:
@@ -73,7 +73,7 @@ func _on_interact_detection_area_entered(area: Area2D) -> void:
 
 	# Enter safehouse if player is able to
 	if area.is_in_group("Safehouse") and can_finish_lvl:
-		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 # Interaction exiting detection
 func _on_interact_detection_area_exited(area: Area2D) -> void:
