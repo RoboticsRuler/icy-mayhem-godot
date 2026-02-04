@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://bmk3nspl4ny2k"]
+
+[ext_resource type="Script" uid="uid://51s5pkbme1rn" path="res://scripts/level_selector.gd" id="1_hjtau"]
+[ext_resource type="PackedScene" uid="uid://dafwsey1ych76" path="res://scenes/background.tscn" id="1_tr5s6"]
+[ext_resource type="FontFile" uid="uid://c4tovgvqkv3mn" path="res://assets/misc/Papernotes Sketch.ttf" id="2_rqfkl"]
+[ext_resource type="Texture2D" uid="uid://wvdtqhp8q82h" path="res://assets/art/arrow.png" id="3_56kad"]
+[ext_resource type="FontFile" uid="uid://c2icmyk3kdg2c" path="res://assets/misc/Papernotes.ttf" id="3_vj03c"]
+[ext_resource type="Texture2D" uid="uid://dsjqn6kgo7ajf" path="res://assets/art/arrow_hover.png" id="4_2ec5i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hjtau"]
+bg_color = Color(0.49411765, 0.5176471, 0.6509804, 1)
+border_color = Color(0.494, 0.51739997, 0.65, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0, 0, 0, 0.156863)
+shadow_size = 10
+shadow_offset = Vector2(10, 15)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56kad"]
+bg_color = Color(0.40320003, 0.42672002, 0.56, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0, 0, 0, 0.156863)
+shadow_size = 10
+shadow_offset = Vector2(10, 15)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ec5i"]
+bg_color = Color(0.55480003, 0.58108, 0.73, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0, 0, 0, 0.156863)
+shadow_size = 10
+shadow_offset = Vector2(10, 15)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5lm0q"]
+
+[node name="Level Selector" type="Node2D" unique_id=1788503639]
+script = ExtResource("1_hjtau")
+
+[node name="Background" parent="." unique_id=1569188693 instance=ExtResource("1_tr5s6")]
+
+[node name="Back" type="TextureButton" parent="." unique_id=576435429]
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 650.0
+offset_bottom = 650.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("3_56kad")
+texture_hover = ExtResource("4_2ec5i")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1957777018]
+offset_left = 635.5
+offset_top = 287.5
+offset_right = 1924.5
+offset_bottom = 1152.5
+theme_override_constants/separation = 110
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=769800457]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_rqfkl")
+theme_override_font_sizes/font_size = 250
+text = "Levels"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2" unique_id=1090030062]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="Level 1" type="Button" parent="VBoxContainer2/VBoxContainer" unique_id=990727801]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_vj03c")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = SubResource("StyleBoxFlat_hjtau")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_56kad")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ec5i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5lm0q")
+text = "Level 1"
+
+[node name="Level 2" type="Button" parent="VBoxContainer2/VBoxContainer" unique_id=1098047694]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_vj03c")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = SubResource("StyleBoxFlat_hjtau")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_56kad")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ec5i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5lm0q")
+text = "Level 2"
+
+[node name="Level 3" type="Button" parent="VBoxContainer2/VBoxContainer" unique_id=73799997]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_vj03c")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = SubResource("StyleBoxFlat_hjtau")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_56kad")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ec5i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5lm0q")
+text = "Level 3"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer/Level 1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer/Level 2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer/Level 3" to="." method="_on_level_3_pressed"]

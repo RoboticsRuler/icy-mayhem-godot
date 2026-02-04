@@ -55,6 +55,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_wu84c")
 theme_override_font_sizes/font_size = 250
 text = "Icy Mayhem"
+horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer2" unique_id=1141116413]
 custom_minimum_size = Vector2(500, 0)
