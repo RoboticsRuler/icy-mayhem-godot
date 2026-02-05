@@ -35,15 +35,15 @@ font_size = 17
 [node name="Level1" type="Node2D" unique_id=702311018]
 
 [node name="Player" parent="." unique_id=1014737346 instance=ExtResource("1_lsmp6")]
-position = Vector2(-1.9073489e-06, 48.000023)
+position = Vector2(16792, 6479)
 rotation = 0.2617994
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Enemy" parent="." unique_id=2090358676 instance=ExtResource("2_xrdnt")]
-position = Vector2(38736, 13472)
+position = Vector2(39838.008, 16695)
 
 [node name="Safehouse" parent="." unique_id=1020140978 instance=ExtResource("3_wrinw")]
-position = Vector2(44352, 13432)
+position = Vector2(45454.008, 16655)
 
 [node name="Ice" type="Node" parent="." unique_id=534667345]
 
@@ -161,76 +161,86 @@ rotation = -0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice30" parent="Ice" unique_id=1613860274 instance=ExtResource("4_chwpn")]
-position = Vector2(26560, 10608.001)
-rotation = 0.5235988
+position = Vector2(26811, 11599)
+rotation = 1.0471976
+scale = Vector2(9.600001, 1)
+
+[node name="Ice47" parent="Ice" unique_id=1772028536 instance=ExtResource("4_chwpn")]
+position = Vector2(27286.998, 12670.001)
+rotation = 1.2793263
+scale = Vector2(9.600001, 1)
+
+[node name="Ice48" parent="Ice" unique_id=1442616188 instance=ExtResource("4_chwpn")]
+position = Vector2(27823, 13678.999)
+rotation = 0.87266463
 scale = Vector2(9.600001, 1)
 
 [node name="Ice31" parent="Ice" unique_id=962295161 instance=ExtResource("4_chwpn")]
-position = Vector2(27679.996, 11072.001)
+position = Vector2(28782, 14295.001)
 rotation = 0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice32" parent="Ice" unique_id=363173604 instance=ExtResource("4_chwpn")]
-position = Vector2(28888, 11232)
+position = Vector2(29990.004, 14455)
 
 [node name="Ice33" parent="Ice" unique_id=212497774 instance=ExtResource("4_chwpn")]
-position = Vector2(30096, 11072)
+position = Vector2(31198.004, 14295)
 rotation = -0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice34" parent="Ice" unique_id=1632573731 instance=ExtResource("4_chwpn")]
-position = Vector2(31664, 10456)
+position = Vector2(32766.004, 13679)
 rotation = -1.5707964
 
 [node name="Ice35" parent="Ice" unique_id=511257388 instance=ExtResource("4_chwpn")]
-position = Vector2(31672, 11688.001)
+position = Vector2(32774.004, 14911.001)
 rotation = 0.5235988
 scale = Vector2(9.600001, 1)
 
 [node name="Ice36" parent="Ice" unique_id=1010374118 instance=ExtResource("4_chwpn")]
-position = Vector2(32808, 12160.001)
+position = Vector2(33910.008, 15383.001)
 rotation = 0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice37" parent="Ice" unique_id=1139128205 instance=ExtResource("4_chwpn")]
-position = Vector2(34016, 12320)
+position = Vector2(35118.008, 15543)
 
 [node name="Ice38" parent="Ice" unique_id=144873217 instance=ExtResource("4_chwpn")]
-position = Vector2(35208, 12480.002)
+position = Vector2(36310.008, 15703.002)
 rotation = 0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice39" parent="Ice" unique_id=1289825613 instance=ExtResource("4_chwpn")]
-position = Vector2(36320, 12944.001)
+position = Vector2(37422, 16167.001)
 rotation = 0.5235988
 scale = Vector2(9.600001, 1)
 
 [node name="Ice40" parent="Ice" unique_id=1139814266 instance=ExtResource("4_chwpn")]
-position = Vector2(37440, 13408.001)
+position = Vector2(38542.008, 16631)
 rotation = 0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice41" parent="Ice" unique_id=984870340 instance=ExtResource("4_chwpn")]
-position = Vector2(38648, 13568)
+position = Vector2(39750.008, 16791)
 
 [node name="Ice42" parent="Ice" unique_id=1667858438 instance=ExtResource("4_chwpn")]
-position = Vector2(39856, 13408)
+position = Vector2(40958.008, 16631)
 rotation = -0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice43" parent="Ice" unique_id=1913051901 instance=ExtResource("4_chwpn")]
-position = Vector2(41536, 13408.001)
+position = Vector2(42638.008, 16631)
 rotation = 0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice44" parent="Ice" unique_id=547973883 instance=ExtResource("4_chwpn")]
-position = Vector2(42743.996, 13567.999)
+position = Vector2(43846, 16791)
 
 [node name="Ice45" parent="Ice" unique_id=136629253 instance=ExtResource("4_chwpn")]
-position = Vector2(43967.996, 13567.999)
+position = Vector2(45070, 16791)
 
 [node name="Ice46" parent="Ice" unique_id=267133308 instance=ExtResource("4_chwpn")]
-position = Vector2(44968, 13151.999)
+position = Vector2(46070.008, 16374.999)
 rotation = -0.7853982
 
 [node name="Snow" type="Node" parent="." unique_id=1301722276]
@@ -301,7 +311,7 @@ trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_kry3j")
 
 [node name="GPUParticles2D6" type="GPUParticles2D" parent="Snow" unique_id=885567143]
-position = Vector2(29688, 10544)
+position = Vector2(30790.004, 13767)
 rotation = 1.5707964
 scale = Vector2(3, 3)
 emitting = false
@@ -314,7 +324,7 @@ trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_kry3j")
 
 [node name="GPUParticles2D7" type="GPUParticles2D" parent="Snow" unique_id=993612696]
-position = Vector2(36104, 12792)
+position = Vector2(37206.008, 16015)
 rotation = 1.5707964
 scale = Vector2(3, 3)
 emitting = false
@@ -327,7 +337,7 @@ trail_enabled = true
 process_material = SubResource("ParticleProcessMaterial_kry3j")
 
 [node name="GPUParticles2D8" type="GPUParticles2D" parent="Snow" unique_id=1453242122]
-position = Vector2(41655.996, 13136)
+position = Vector2(42758, 16359)
 rotation = 1.5707964
 scale = Vector2(3, 3)
 emitting = false
@@ -361,27 +371,27 @@ text = "While mid-air, use A/D to rotate the sleigh to align it with the ground 
 label_settings = SubResource("LabelSettings_kry3j")
 
 [node name="DivingInfo" type="Label" parent="Tutorials" unique_id=510378406]
-offset_left = 30752.0
-offset_top = 10592.0
-offset_right = 31539.0
-offset_bottom = 10616.0
+offset_left = 31854.004
+offset_top = 13815.0
+offset_right = 32641.004
+offset_bottom = 13839.0
 text = "While mid-air, hold space to dive and get out of tricky situations like the one you're in right now!"
 label_settings = SubResource("LabelSettings_kry3j")
 
 [node name="EnemyInfo" type="Label" parent="Tutorials" unique_id=1879239120]
-offset_left = 38208.0
-offset_top = 13136.0
-offset_right = 39088.0
-offset_bottom = 13160.0
+offset_left = 39310.008
+offset_top = 16359.0
+offset_right = 40190.008
+offset_bottom = 16383.0
 text = "Watch out for enemies! Press E when near enemies to kill them. Killing an enemy gives a small speed boost!"
 label_settings = SubResource("LabelSettings_kry3j")
 horizontal_alignment = 1
 
 [node name="GoodLuck" type="Label" parent="Tutorials" unique_id=475751452]
-offset_left = 40656.0
-offset_top = 12928.0
-offset_right = 40752.0
-offset_bottom = 12952.0
+offset_left = 41758.008
+offset_top = 16151.0
+offset_right = 41854.008
+offset_bottom = 16175.0
 text = "Good luck!"
 label_settings = SubResource("LabelSettings_kry3j")
 horizontal_alignment = 1
@@ -395,22 +405,22 @@ position = Vector2(25184, 9744)
 scale = Vector2(7.84, 3)
 
 [node name="TutorialTrigger3" parent="Tutorials" unique_id=1685886306 instance=ExtResource("7_6r07y")]
-position = Vector2(31144, 10704)
+position = Vector2(32246.004, 13927)
 scale = Vector2(7.04, 3)
 
 [node name="TutorialTrigger4" parent="Tutorials" unique_id=1349316961 instance=ExtResource("7_6r07y")]
-position = Vector2(38648, 13312.001)
+position = Vector2(39750.008, 16535)
 scale = Vector2(6.7599998, 3)
 
 [node name="TutorialTrigger5" parent="Tutorials" unique_id=1153291079 instance=ExtResource("7_6r07y")]
-position = Vector2(40704, 13064)
+position = Vector2(41806.008, 16287)
 scale = Vector2(1.8803489, 2.48)
 
 [node name="Button" parent="Tutorials" unique_id=1322701791 instance=ExtResource("7_lsmp6")]
 position = Vector2(4712, 1832)
 
 [node name="Button2" parent="Tutorials" unique_id=1966498234 instance=ExtResource("7_lsmp6")]
-position = Vector2(34016, 12248)
+position = Vector2(35118.008, 15471)
 
 [node name="Button3" parent="Tutorials" unique_id=1483863189 instance=ExtResource("7_lsmp6")]
-position = Vector2(43424, 13496)
+position = Vector2(44526.008, 16719)
