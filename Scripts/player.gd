@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 
 	# Exit level
 	if Input.is_action_just_pressed("exit"):
-		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 	# Kill enemy
@@ -63,7 +63,9 @@ func _process(delta: float) -> void:
 func _on_head_detection_area_entered(area: Area2D) -> void:
 # Player dies if they land on their head
 	if area.is_in_group("Ice"):
-		get_tree().call_deferred("change_scene_to_file", "res://scenes/game_over.tscn")
+		get_tree().paused = true
+		var go_scene = load("res://scenes/game_over.tscn").instantiate()
+		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 # Detect if player is not on ground

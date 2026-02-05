@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bg8cb0syjcpqe"]
 
-[ext_resource type="Script" uid="uid://u7xpf4l407h0" path="res://Scripts/start_3.gd" id="1_53xsp"]
-[ext_resource type="PackedScene" uid="uid://bhja5q7hur6cl" path="res://Scenes/player.tscn" id="1_g5cw1"]
-[ext_resource type="PackedScene" uid="uid://efqltw8plwwl" path="res://Scenes/ice.tscn" id="2_76ybr"]
-[ext_resource type="PackedScene" uid="uid://0qo2kjjhtjav" path="res://Scenes/button.tscn" id="3_76ybr"]
+[ext_resource type="Script" uid="uid://u7xpf4l407h0" path="res://scripts/start_3.gd" id="1_53xsp"]
+[ext_resource type="PackedScene" uid="uid://bhja5q7hur6cl" path="res://scenes/player.tscn" id="1_g5cw1"]
+[ext_resource type="PackedScene" uid="uid://efqltw8plwwl" path="res://scenes/ice.tscn" id="2_76ybr"]
+[ext_resource type="PackedScene" uid="uid://0qo2kjjhtjav" path="res://scenes/button.tscn" id="3_76ybr"]
 [ext_resource type="Texture2D" uid="uid://beqptwo1ufhtj" path="res://assets/art/particle.png" id="4_qf6rc"]
-[ext_resource type="PackedScene" uid="uid://b5ntujnpf1a4a" path="res://Scenes/safehouse.tscn" id="4_s8nj6"]
-[ext_resource type="PackedScene" uid="uid://d0wie1jisp4yv" path="res://Scenes/enemy.tscn" id="5_vwg62"]
+[ext_resource type="PackedScene" uid="uid://b5ntujnpf1a4a" path="res://scenes/safehouse.tscn" id="4_s8nj6"]
+[ext_resource type="PackedScene" uid="uid://d0wie1jisp4yv" path="res://scenes/enemy.tscn" id="5_vwg62"]
 
 [sub_resource type="Curve" id="Curve_53xsp"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.250318, 1), 0.0, 0.0, 0, 0, Vector2(0.748412, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]

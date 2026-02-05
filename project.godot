@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Icy Mayhem"
-run/main_scene="uid://do5y6uq02an1w"
+run/main_scene="uid://fdr37h7oapff"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

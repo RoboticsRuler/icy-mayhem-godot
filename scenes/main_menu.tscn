@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://fdr37h7oapff"]
 
-[ext_resource type="Script" uid="uid://b5km2wxcksjoc" path="res://Scripts/main_menu.gd" id="1_uxlcg"]
-[ext_resource type="PackedScene" uid="uid://dafwsey1ych76" path="res://Scenes/background.tscn" id="2_wu84c"]
+[ext_resource type="Script" uid="uid://b5km2wxcksjoc" path="res://scripts/main_menu.gd" id="1_uxlcg"]
+[ext_resource type="PackedScene" uid="uid://dafwsey1ych76" path="res://scenes/background.tscn" id="2_wu84c"]
 [ext_resource type="FontFile" uid="uid://c4tovgvqkv3mn" path="res://assets/misc/Papernotes Sketch.ttf" id="3_wu84c"]
 [ext_resource type="FontFile" uid="uid://c2icmyk3kdg2c" path="res://assets/misc/Papernotes.ttf" id="4_8ln24"]
 
