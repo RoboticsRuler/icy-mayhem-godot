@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://beqptwo1ufhtj" path="res://assets/art/particle.png" id="5_af3po"]
 [ext_resource type="PackedScene" uid="uid://dneiw8unh562m" path="res://scenes/tutorial_trigger.tscn" id="7_6r07y"]
 [ext_resource type="PackedScene" uid="uid://0qo2kjjhtjav" path="res://scenes/button.tscn" id="7_lsmp6"]
+[ext_resource type="Texture2D" uid="uid://c5uhoa5yeou17" path="res://assets/art/medium_tree.png" id="8_15mv3"]
+[ext_resource type="Texture2D" uid="uid://cbub0wrytms20" path="res://assets/art/large_tree.png" id="9_e3sih"]
 
 [sub_resource type="Curve" id="Curve_8gbba"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.250318, 1), 0.0, 0.0, 0, 0, Vector2(0.748412, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -35,7 +37,8 @@ font_size = 17
 [node name="Level1" type="Node2D" unique_id=702311018]
 
 [node name="Player" parent="." unique_id=1014737346 instance=ExtResource("1_lsmp6")]
-position = Vector2(16792, 6479)
+z_index = 10
+position = Vector2(0, 48)
 rotation = 0.2617994
 scale = Vector2(0.99999994, 0.99999994)
 
@@ -424,3 +427,42 @@ position = Vector2(35118.008, 15471)
 
 [node name="Button3" parent="Tutorials" unique_id=1483863189 instance=ExtResource("7_lsmp6")]
 position = Vector2(44526.008, 16719)
+
+[node name="MediumTree" type="Sprite2D" parent="." unique_id=2013963801]
+position = Vector2(765, 234)
+rotation = 0.23212878
+scale = Vector2(0.176, 0.176)
+texture = ExtResource("8_15mv3")
+
+[node name="MediumTree2" type="Sprite2D" parent="." unique_id=1391493026]
+position = Vector2(1848.4921, 842.49207)
+rotation = 0.58119464
+scale = Vector2(0.176, 0.176)
+texture = ExtResource("8_15mv3")
+
+[node name="LargeTree" type="Sprite2D" parent="." unique_id=1412062707]
+z_index = 50
+position = Vector2(108.00001, 54)
+rotation = 0.116937056
+scale = Vector2(0.176, 0.176)
+texture = ExtResource("9_e3sih")
+
+[node name="LargeTree2" type="Sprite2D" parent="." unique_id=1621208578]
+z_index = 50
+position = Vector2(1434.0001, 596.99994)
+rotation = 0.52534413
+scale = Vector2(0.176, 0.176)
+texture = ExtResource("9_e3sih")
+
+[node name="LargeTree3" type="Sprite2D" parent="." unique_id=1864823357]
+z_index = 50
+position = Vector2(2606, 1277)
+rotation = 0.52534413
+scale = Vector2(0.176, 0.176)
+texture = ExtResource("9_e3sih")
+
+[node name="LargeTree4" type="Sprite2D" parent="." unique_id=383919228]
+position = Vector2(2670.0002, 1309.9999)
+rotation = 0.52534413
+scale = Vector2(0.176, 0.176)
+texture = ExtResource("9_e3sih")
