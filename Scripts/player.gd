@@ -20,7 +20,9 @@ func _process(delta: float) -> void:
 
 	# Exit level
 	if Input.is_action_just_pressed("exit"):
-		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		get_tree().paused = true
+		var go_scene = load("res://scenes/pause_menu.tscn").instantiate()
+		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 	# Kill enemy
