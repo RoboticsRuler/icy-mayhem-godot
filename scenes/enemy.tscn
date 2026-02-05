@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://d0wie1jisp4yv"]
+[gd_scene format=3 uid="uid://cu0nhrlejvxn8"]
+
+[ext_resource type="Texture2D" uid="uid://bvg7wr7ptgbu7" path="res://assets/art/enemy.png" id="1_hghv2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7xaro"]
 radius = 40.0
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_7k104"]
 
 [node name="Enemy" type="Area2D" unique_id=2090358676 groups=["Enemy"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1096611758]
 shape = SubResource("CircleShape2D_7xaro")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1836094945]
-position = Vector2(4.7683716e-07, 5.722046e-06)
-scale = Vector2(32, 32.000004)
-mesh = SubResource("CapsuleMesh_7k104")
+[node name="Enemy" type="Sprite2D" parent="." unique_id=1947177806]
+position = Vector2(-4, -3.2)
+scale = Vector2(0.091000006, 0.087)
+texture = ExtResource("1_hghv2")

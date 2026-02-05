@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://d0k7xy3m3dp5u"]
 
-[ext_resource type="Script" uid="uid://dmld7al6fynwv" path="res://scripts/game_over.gd" id="1_tbwuq"]
-[ext_resource type="PackedScene" uid="uid://dafwsey1ych76" path="res://scenes/background.tscn" id="1_wqhvx"]
+[ext_resource type="Script" uid="uid://ca0sil62y4m41" path="res://scripts/game_over.gd" id="1_tbwuq"]
 [ext_resource type="FontFile" uid="uid://c2icmyk3kdg2c" path="res://assets/misc/Papernotes.ttf" id="2_tbwuq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbwuq"]
@@ -41,8 +40,6 @@ shadow_offset = Vector2(10, 15)
 
 [node name="Game Over" type="Node2D" unique_id=1913786396]
 script = ExtResource("1_tbwuq")
-
-[node name="Background" parent="." unique_id=1569188693 instance=ExtResource("1_wqhvx")]
 
 [node name="Label" type="Label" parent="." unique_id=1698863850]
 offset_left = 737.5

@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://bhja5q7hur6cl"]
+[gd_scene format=3 uid="uid://crlwsc5p4rqi"]
 
 [ext_resource type="Texture2D" uid="uid://dykt1v6rwn2y1" path="res://assets/art/sled.png" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://by5g3ndys0qf3" path="res://scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://bgr3fhidw0mre" path="res://scripts/player.gd" id="1_cvnsp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
 radius = 11.0

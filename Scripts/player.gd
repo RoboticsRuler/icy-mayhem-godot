@@ -13,8 +13,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+
+	# Dive
 	if Input.is_action_pressed("dive") and not is_on_ground:
 		linear_velocity.y += 10
+
+	# Exit level
+	if Input.is_action_just_pressed("exit"):
+		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 	# Kill enemy
 	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Enemy"):
@@ -57,6 +64,7 @@ func _on_head_detection_area_entered(area: Area2D) -> void:
 # Player dies if they land on their head
 	if area.is_in_group("Ice"):
 		get_tree().call_deferred("change_scene_to_file", "res://scenes/game_over.tscn")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 # Detect if player is not on ground
 func _on_ground_detection_area_exited(area: Area2D) -> void:
@@ -74,6 +82,7 @@ func _on_interact_detection_area_entered(area: Area2D) -> void:
 	# Enter safehouse if player is able to
 	if area.is_in_group("Safehouse") and can_finish_lvl:
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 # Interaction exiting detection
 func _on_interact_detection_area_exited(area: Area2D) -> void:
