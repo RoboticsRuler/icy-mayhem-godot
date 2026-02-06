@@ -1,6 +1,5 @@
 extends RigidBody2D
 
-var jump_velocity = -600
 var is_on_ground
 var can_finish_lvl = false
 var is_button_pressed
@@ -92,7 +91,9 @@ func _on_interact_detection_area_entered(area: Area2D) -> void:
 		Engine.time_scale = 0.1
 
 	if area.is_in_group("Deathzone"):
-		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+		get_tree().paused = true
+		var go_scene = load("res://scenes/game_over.tscn").instantiate()
+		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 	# Enter safehouse if player is able to
