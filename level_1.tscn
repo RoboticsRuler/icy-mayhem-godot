@@ -1,0 +1,528 @@
+[gd_scene format=3 uid="uid://bm8nv8oc85bnx"]
+
+[ext_resource type="Script" uid="uid://cnn3rqmv23d6o" path="res://Scripts/start_1.gd" id="1_chwpn"]
+[ext_resource type="PackedScene" uid="uid://crlwsc5p4rqi" path="res://Scenes/player.tscn" id="1_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://cu0nhrlejvxn8" path="res://Scenes/enemy.tscn" id="2_xrdnt"]
+[ext_resource type="PackedScene" uid="uid://dj63sccy5x0oo" path="res://Scenes/safehouse.tscn" id="3_wrinw"]
+[ext_resource type="PackedScene" uid="uid://efqltw8plwwl" path="res://Scenes/ice.tscn" id="4_chwpn"]
+[ext_resource type="Texture2D" uid="uid://beqptwo1ufhtj" path="res://assets/art/particle.png" id="5_af3po"]
+[ext_resource type="PackedScene" uid="uid://dneiw8unh562m" path="res://Scenes/tutorial_trigger.tscn" id="7_6r07y"]
+[ext_resource type="PackedScene" uid="uid://mw4xckcdj22m" path="res://Scenes/button.tscn" id="7_lsmp6"]
+[ext_resource type="FontFile" uid="uid://c2icmyk3kdg2c" path="res://assets/misc/Papernotes.ttf" id="8_7gny6"]
+[ext_resource type="Texture2D" uid="uid://c5uhoa5yeou17" path="res://assets/art/medium_tree.png" id="8_15mv3"]
+[ext_resource type="Texture2D" uid="uid://cbub0wrytms20" path="res://assets/art/large_tree.png" id="9_e3sih"]
+[ext_resource type="PackedScene" uid="uid://cp8g6d86vvnjs" path="res://Scenes/deathzone.tscn" id="11_af3po"]
+[ext_resource type="Texture2D" uid="uid://dvh8b80wmkn6j" path="res://assets/art/sign.png" id="12_go7sj"]
+
+[sub_resource type="Curve" id="Curve_8gbba"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.250318, 1), 0.0, 0.0, 0, 0, Vector2(0.748412, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_xrdnt"]
+curve = SubResource("Curve_8gbba")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kry3j"]
+particle_flag_disable_z = true
+emission_shape = 2
+emission_sphere_radius = 1350.0
+initial_velocity_min = 1.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.07
+scale_max = 0.07
+scale_curve = SubResource("CurveTexture_xrdnt")
+
+[sub_resource type="LabelSettings" id="LabelSettings_kry3j"]
+font = ExtResource("8_7gny6")
+font_size = 23
+
+[node name="Level1" type="Node2D" unique_id=702311018]
+script = ExtResource("1_chwpn")
+
+[node name="Player" parent="." unique_id=1014737346 instance=ExtResource("1_lsmp6")]
+z_index = 10
+position = Vector2(0, 48)
+rotation = 0.2617994
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Enemy" parent="." unique_id=2090358676 instance=ExtResource("2_xrdnt")]
+position = Vector2(39838.008, 16695)
+
+[node name="Safehouse" parent="." unique_id=1020140978 instance=ExtResource("3_wrinw")]
+position = Vector2(45360, 16656)
+
+[node name="Background" type="ColorRect" parent="." unique_id=487363076]
+z_index = -1
+offset_left = -1108.0
+offset_top = -706.0
+offset_right = 46676.0
+offset_bottom = 17758.0
+color = Color(0.33333334, 0.34901962, 0.4392157, 1)
+
+[node name="Ice" type="Node" parent="." unique_id=534667345]
+
+[node name="Ice1" parent="Ice" unique_id=1317599937 instance=ExtResource("4_chwpn")]
+position = Vector2(192, 192.00003)
+rotation = 0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice4" parent="Ice" unique_id=800108563 instance=ExtResource("4_chwpn")]
+position = Vector2(-680, -480)
+rotation = 1.0471976
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice2" parent="Ice" unique_id=1223635454 instance=ExtResource("4_chwpn")]
+position = Vector2(1304, 656)
+rotation = 0.5235988
+scale = Vector2(9.600001, 1)
+
+[node name="Ice3" parent="Ice" unique_id=734118676 instance=ExtResource("4_chwpn")]
+position = Vector2(2368, 1272)
+rotation = 0.5235988
+scale = Vector2(9.600001, 1)
+
+[node name="Ice8" parent="Ice" unique_id=1400578589 instance=ExtResource("4_chwpn")]
+position = Vector2(3504, 1744.0011)
+rotation = 0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice10" parent="Ice" unique_id=1413336480 instance=ExtResource("4_chwpn")]
+position = Vector2(4720, 1904)
+scale = Vector2(9.8, 1)
+
+[node name="Ice12" parent="Ice" unique_id=171463810 instance=ExtResource("4_chwpn")]
+position = Vector2(5720, 2359.9998)
+rotation = 0.7853982
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice13" parent="Ice" unique_id=1750271662 instance=ExtResource("4_chwpn")]
+position = Vector2(6448, 3312)
+rotation = 1.0471976
+scale = Vector2(9.600003, 1)
+
+[node name="Ice14" parent="Ice" unique_id=851098886 instance=ExtResource("4_chwpn")]
+position = Vector2(7056, 4368)
+rotation = 1.0471976
+scale = Vector2(9.600003, 1)
+
+[node name="Ice15" parent="Ice" unique_id=447192479 instance=ExtResource("4_chwpn")]
+position = Vector2(7792, 5328)
+rotation = 0.7853982
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice16" parent="Ice" unique_id=2134247861 instance=ExtResource("4_chwpn")]
+position = Vector2(8760, 6071.9995)
+rotation = 0.5235988
+scale = Vector2(9.600001, 1)
+
+[node name="Ice17" parent="Ice" unique_id=166558964 instance=ExtResource("4_chwpn")]
+position = Vector2(9880, 6536.0005)
+rotation = 0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice18" parent="Ice" unique_id=1176746892 instance=ExtResource("4_chwpn")]
+position = Vector2(11088, 6696)
+
+[node name="Ice19" parent="Ice" unique_id=665892487 instance=ExtResource("4_chwpn")]
+position = Vector2(12296, 6536)
+rotation = -0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice20" parent="Ice" unique_id=597909587 instance=ExtResource("4_chwpn")]
+position = Vector2(13944, 6536)
+rotation = 0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice21" parent="Ice" unique_id=33563370 instance=ExtResource("4_chwpn")]
+position = Vector2(15151.999, 6695.999)
+
+[node name="Ice22" parent="Ice" unique_id=1079450330 instance=ExtResource("4_chwpn")]
+position = Vector2(16343.999, 6855.9995)
+rotation = 0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice23" parent="Ice" unique_id=962867495 instance=ExtResource("4_chwpn")]
+position = Vector2(17448, 7319.9995)
+rotation = 0.5235988
+scale = Vector2(9.600001, 1)
+
+[node name="Ice24" parent="Ice" unique_id=651393125 instance=ExtResource("4_chwpn")]
+position = Vector2(18400, 8055.998)
+rotation = 0.7853982
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice25" parent="Ice" unique_id=853083594 instance=ExtResource("4_chwpn")]
+position = Vector2(19264, 8919.998)
+rotation = 0.7853982
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice26" parent="Ice" unique_id=1410445931 instance=ExtResource("4_chwpn")]
+position = Vector2(20231.996, 9663.999)
+rotation = 0.5235988
+scale = Vector2(9.600001, 1)
+
+[node name="Ice27" parent="Ice" unique_id=1447553754 instance=ExtResource("4_chwpn")]
+position = Vector2(21352, 10128)
+rotation = 0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice28" parent="Ice" unique_id=1526746070 instance=ExtResource("4_chwpn")]
+position = Vector2(22560, 10287.999)
+
+[node name="Ice29" parent="Ice" unique_id=1203523803 instance=ExtResource("4_chwpn")]
+position = Vector2(23768, 10127.998)
+rotation = -0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice30" parent="Ice" unique_id=1613860274 instance=ExtResource("4_chwpn")]
+position = Vector2(26288.002, 10056.001)
+rotation = -1.0471976
+scale = Vector2(9.600001, 1)
+
+[node name="Ice47" parent="Ice" unique_id=1772028536 instance=ExtResource("4_chwpn")]
+position = Vector2(25888.002, 11472)
+rotation = 0.5235988
+scale = Vector2(9.600001, 1)
+
+[node name="Ice48" parent="Ice" unique_id=1442616188 instance=ExtResource("4_chwpn")]
+position = Vector2(27823, 13678.999)
+rotation = 0.87266463
+scale = Vector2(9.600001, 1)
+
+[node name="Ice31" parent="Ice" unique_id=962295161 instance=ExtResource("4_chwpn")]
+position = Vector2(28782, 14295.001)
+rotation = 0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice32" parent="Ice" unique_id=363173604 instance=ExtResource("4_chwpn")]
+position = Vector2(29990.004, 14455)
+
+[node name="Ice33" parent="Ice" unique_id=212497774 instance=ExtResource("4_chwpn")]
+position = Vector2(31198.004, 14295)
+rotation = -0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice34" parent="Ice" unique_id=1632573731 instance=ExtResource("4_chwpn")]
+position = Vector2(32766.004, 13679)
+rotation = -1.5707964
+
+[node name="Ice35" parent="Ice" unique_id=511257388 instance=ExtResource("4_chwpn")]
+position = Vector2(32774.004, 14911.001)
+rotation = 0.5235988
+scale = Vector2(9.600001, 1)
+
+[node name="Ice36" parent="Ice" unique_id=1010374118 instance=ExtResource("4_chwpn")]
+position = Vector2(33910.008, 15383.001)
+rotation = 0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice37" parent="Ice" unique_id=1139128205 instance=ExtResource("4_chwpn")]
+position = Vector2(35118.008, 15543)
+
+[node name="Ice38" parent="Ice" unique_id=144873217 instance=ExtResource("4_chwpn")]
+position = Vector2(36310.008, 15703.002)
+rotation = 0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice39" parent="Ice" unique_id=1289825613 instance=ExtResource("4_chwpn")]
+position = Vector2(37422, 16167.001)
+rotation = 0.5235988
+scale = Vector2(9.600001, 1)
+
+[node name="Ice40" parent="Ice" unique_id=1139814266 instance=ExtResource("4_chwpn")]
+position = Vector2(38542.008, 16631)
+rotation = 0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice41" parent="Ice" unique_id=984870340 instance=ExtResource("4_chwpn")]
+position = Vector2(39750.008, 16791)
+
+[node name="Ice42" parent="Ice" unique_id=1667858438 instance=ExtResource("4_chwpn")]
+position = Vector2(40958.008, 16631)
+rotation = -0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice43" parent="Ice" unique_id=1913051901 instance=ExtResource("4_chwpn")]
+position = Vector2(42544, 16632)
+rotation = 0.2617994
+scale = Vector2(9.600002, 0.99999994)
+
+[node name="Ice44" parent="Ice" unique_id=547973883 instance=ExtResource("4_chwpn")]
+position = Vector2(43751.992, 16792)
+
+[node name="Ice45" parent="Ice" unique_id=136629253 instance=ExtResource("4_chwpn")]
+position = Vector2(44975.992, 16792)
+
+[node name="Ice46" parent="Ice" unique_id=267133308 instance=ExtResource("4_chwpn")]
+position = Vector2(46070.008, 16374.999)
+rotation = -0.7853982
+
+[node name="Snow" type="Node" parent="." unique_id=1301722276]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Snow" unique_id=57709367]
+position = Vector2(0, 7.275958e-12)
+rotation = 1.5707964
+scale = Vector2(3, 3)
+emitting = false
+amount = 700
+texture = ExtResource("5_af3po")
+lifetime = 10.0
+speed_scale = 6.0
+visibility_rect = Rect2(-1350, -1350, 2700, 2700)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_kry3j")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="Snow" unique_id=1729609753]
+position = Vector2(7048.0005, 3200.0002)
+rotation = 1.5707964
+scale = Vector2(3, 3)
+emitting = false
+amount = 700
+texture = ExtResource("5_af3po")
+lifetime = 10.0
+speed_scale = 6.0
+visibility_rect = Rect2(-1350, -1350, 2700, 2700)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_kry3j")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="Snow" unique_id=1216636233]
+position = Vector2(11864, 6096)
+rotation = 1.5707964
+scale = Vector2(3, 3)
+emitting = false
+amount = 700
+texture = ExtResource("5_af3po")
+lifetime = 10.0
+speed_scale = 6.0
+visibility_rect = Rect2(-1350, -1350, 2700, 2700)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_kry3j")
+
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="Snow" unique_id=975493308]
+position = Vector2(17928, 7576)
+rotation = 1.5707964
+scale = Vector2(3, 3)
+emitting = false
+amount = 700
+texture = ExtResource("5_af3po")
+lifetime = 10.0
+speed_scale = 6.0
+visibility_rect = Rect2(-1350, -1350, 2700, 2700)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_kry3j")
+
+[node name="GPUParticles2D5" type="GPUParticles2D" parent="Snow" unique_id=18437074]
+position = Vector2(23328, 9536.001)
+rotation = 1.5707964
+scale = Vector2(3, 3)
+emitting = false
+amount = 700
+texture = ExtResource("5_af3po")
+lifetime = 10.0
+speed_scale = 6.0
+visibility_rect = Rect2(-1350, -1350, 2700, 2700)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_kry3j")
+
+[node name="GPUParticles2D6" type="GPUParticles2D" parent="Snow" unique_id=885567143]
+position = Vector2(30790.004, 13767)
+rotation = 1.5707964
+scale = Vector2(3, 3)
+emitting = false
+amount = 700
+texture = ExtResource("5_af3po")
+lifetime = 10.0
+speed_scale = 6.0
+visibility_rect = Rect2(-1350, -1350, 2700, 2700)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_kry3j")
+
+[node name="GPUParticles2D7" type="GPUParticles2D" parent="Snow" unique_id=993612696]
+position = Vector2(37206.008, 16015)
+rotation = 1.5707964
+scale = Vector2(3, 3)
+emitting = false
+amount = 700
+texture = ExtResource("5_af3po")
+lifetime = 10.0
+speed_scale = 6.0
+visibility_rect = Rect2(-1350, -1350, 2700, 2700)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_kry3j")
+
+[node name="GPUParticles2D8" type="GPUParticles2D" parent="Snow" unique_id=1453242122]
+position = Vector2(42758, 16359)
+rotation = 1.5707964
+scale = Vector2(3, 3)
+emitting = false
+amount = 700
+texture = ExtResource("5_af3po")
+lifetime = 10.0
+speed_scale = 6.0
+visibility_rect = Rect2(-1350, -1350, 2700, 2700)
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_kry3j")
+
+[node name="Buttons" type="Node" parent="." unique_id=2026276513]
+
+[node name="Button" parent="Buttons" unique_id=1322701791 instance=ExtResource("7_lsmp6")]
+position = Vector2(4712, 1828)
+
+[node name="Button2" parent="Buttons" unique_id=1966498234 instance=ExtResource("7_lsmp6")]
+position = Vector2(22592, 10212)
+
+[node name="Button3" parent="Buttons" unique_id=1483863189 instance=ExtResource("7_lsmp6")]
+position = Vector2(44576, 16716)
+
+[node name="Tutorials" type="Node" parent="." unique_id=651988572]
+
+[node name="ButtonInfo" type="Label" parent="Tutorials" unique_id=1155674470]
+offset_left = 4272.0
+offset_top = 1560.0
+offset_right = 5154.0
+offset_bottom = 1584.0
+text = "Press E when near buttons to activate them. Activate all three buttons to access the cabin at the end"
+label_settings = SubResource("LabelSettings_kry3j")
+horizontal_alignment = 1
+
+[node name="TurningInfo" type="Label" parent="Tutorials" unique_id=1976488016]
+offset_left = 24744.0
+offset_top = 9576.0
+offset_right = 25624.0
+offset_bottom = 9600.0
+text = "While mid-air, use A/D to rotate the sleigh to align it with the ground before you land. You can do tricks too!"
+label_settings = SubResource("LabelSettings_kry3j")
+
+[node name="DivingInfo" type="Label" parent="Tutorials" unique_id=510378406]
+offset_left = 31854.004
+offset_top = 13815.0
+offset_right = 32641.004
+offset_bottom = 13839.0
+text = "While mid-air, hold space to dive and get out of tricky situations like the one you're in right now!"
+label_settings = SubResource("LabelSettings_kry3j")
+
+[node name="EnemyInfo" type="Label" parent="Tutorials" unique_id=1879239120]
+offset_left = 39310.008
+offset_top = 16359.0
+offset_right = 40190.008
+offset_bottom = 16383.0
+text = "Watch out for enemies! Press E when near enemies to kill them. Killing an enemy gives a small speed boost!"
+label_settings = SubResource("LabelSettings_kry3j")
+horizontal_alignment = 1
+
+[node name="SignInfo" type="Label" parent="Tutorials" unique_id=475751452]
+offset_left = 12813.0
+offset_top = 6020.0
+offset_right = 13431.0
+offset_bottom = 6044.0
+text = "There are also signs to indacate a button up ahead. Watch out for them!"
+label_settings = SubResource("LabelSettings_kry3j")
+horizontal_alignment = 1
+
+[node name="GoodLuck" type="Label" parent="Tutorials" unique_id=2083660559]
+offset_left = 41651.0
+offset_top = 16130.0
+offset_right = 41864.0
+offset_bottom = 16152.0
+text = "Good luck, and have fun!!"
+label_settings = SubResource("LabelSettings_kry3j")
+horizontal_alignment = 1
+
+[node name="TutorialTrigger" parent="Tutorials" unique_id=2080396294 instance=ExtResource("7_6r07y")]
+position = Vector2(4712, 1648.0001)
+scale = Vector2(5.5, 3)
+
+[node name="TutorialTrigger2" parent="Tutorials" unique_id=1220565393 instance=ExtResource("7_6r07y")]
+position = Vector2(25184, 9744)
+scale = Vector2(7.84, 3)
+
+[node name="TutorialTrigger3" parent="Tutorials" unique_id=1685886306 instance=ExtResource("7_6r07y")]
+position = Vector2(32246.004, 13927)
+scale = Vector2(7.04, 3)
+
+[node name="TutorialTrigger4" parent="Tutorials" unique_id=1349316961 instance=ExtResource("7_6r07y")]
+position = Vector2(39750.008, 16535)
+scale = Vector2(6.7599998, 3)
+
+[node name="TutorialTrigger5" parent="Tutorials" unique_id=1153291079 instance=ExtResource("7_6r07y")]
+position = Vector2(13121, 6156.0005)
+scale = Vector2(3.41, 2.48)
+
+[node name="TutorialTrigger6" parent="Tutorials" unique_id=1060508709 instance=ExtResource("7_6r07y")]
+position = Vector2(41756, 16260.999)
+scale = Vector2(2.68, 2.48)
+
+[node name="Trees" type="Node" parent="." unique_id=2135314435]
+
+[node name="MediumTree" type="Sprite2D" parent="Trees" unique_id=2013963801]
+position = Vector2(765, 234)
+rotation = 0.2321288
+scale = Vector2(0.176, 0.176)
+texture = ExtResource("8_15mv3")
+
+[node name="MediumTree2" type="Sprite2D" parent="Trees" unique_id=1391493026]
+position = Vector2(1848.4921, 842.49207)
+rotation = 0.5811946
+scale = Vector2(0.176, 0.176)
+texture = ExtResource("8_15mv3")
+
+[node name="LargeTree" type="Sprite2D" parent="Trees" unique_id=1412062707]
+z_index = 50
+position = Vector2(108.00001, 54)
+rotation = 0.116937056
+scale = Vector2(0.17600001, 0.17600001)
+texture = ExtResource("9_e3sih")
+
+[node name="LargeTree2" type="Sprite2D" parent="Trees" unique_id=1621208578]
+z_index = 50
+position = Vector2(1434.0001, 596.99994)
+rotation = 0.5253441
+scale = Vector2(0.176, 0.176)
+texture = ExtResource("9_e3sih")
+
+[node name="LargeTree3" type="Sprite2D" parent="Trees" unique_id=1864823357]
+z_index = 50
+position = Vector2(2606, 1277)
+rotation = 0.5253441
+scale = Vector2(0.176, 0.176)
+texture = ExtResource("9_e3sih")
+
+[node name="LargeTree4" type="Sprite2D" parent="Trees" unique_id=383919228]
+position = Vector2(2670.0002, 1309.9999)
+rotation = 0.5253441
+scale = Vector2(0.176, 0.176)
+texture = ExtResource("9_e3sih")
+
+[node name="Deathzones" type="Node" parent="." unique_id=1605569431]
+
+[node name="Deathzone" parent="Deathzones" unique_id=946865561 instance=ExtResource("11_af3po")]
+position = Vector2(13120, 6536)
+scale = Vector2(5.28, 1)
+
+[node name="Deathzone2" parent="Deathzones" unique_id=383016583 instance=ExtResource("11_af3po")]
+position = Vector2(24823.998, 11944)
+rotation = 0.5235988
+scale = Vector2(47.93582, 1)
+
+[node name="Deathzone3" parent="Deathzones" unique_id=1110285827 instance=ExtResource("11_af3po")]
+position = Vector2(31711.998, 14672.001)
+rotation = 0.2617994
+scale = Vector2(11.799922, 0.99999994)
+
+[node name="Deathzone4" parent="Deathzones" unique_id=457895 instance=ExtResource("11_af3po")]
+position = Vector2(41744, 16632)
+scale = Vector2(4.8, 1)
+
+[node name="Sign" type="Sprite2D" parent="." unique_id=466965069]
+z_index = 5
+position = Vector2(18742, 8266)
+rotation = -18.064157
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("12_go7sj")
+
+[node name="Sign2" type="Sprite2D" parent="." unique_id=44306979]
+z_index = 5
+position = Vector2(42113, 16422)
+rotation = 0.23212878
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("12_go7sj")
