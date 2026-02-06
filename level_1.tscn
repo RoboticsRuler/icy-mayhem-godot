@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://0qo2kjjhtjav" path="res://Scenes/button.tscn" id="7_lsmp6"]
 [ext_resource type="Texture2D" uid="uid://c5uhoa5yeou17" path="res://assets/art/medium_tree.png" id="8_15mv3"]
 [ext_resource type="Texture2D" uid="uid://cbub0wrytms20" path="res://assets/art/large_tree.png" id="9_e3sih"]
+[ext_resource type="PackedScene" uid="uid://cp8g6d86vvnjs" path="res://Scenes/deathzone.tscn" id="11_af3po"]
 
 [sub_resource type="Curve" id="Curve_8gbba"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.250318, 1), 0.0, 0.0, 0, 0, Vector2(0.748412, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -48,7 +49,15 @@ scale = Vector2(0.99999994, 0.99999994)
 position = Vector2(39838.008, 16695)
 
 [node name="Safehouse" parent="." unique_id=1020140978 instance=ExtResource("3_wrinw")]
-position = Vector2(45454.008, 16655)
+position = Vector2(45360, 16656)
+
+[node name="Background" type="ColorRect" parent="." unique_id=487363076]
+z_index = -1
+offset_left = -1144.0
+offset_top = -1136.0
+offset_right = 46640.0
+offset_bottom = 17328.0
+color = Color(0.33333334, 0.34901962, 0.4392157, 1)
 
 [node name="Ice" type="Node" parent="." unique_id=534667345]
 
@@ -234,15 +243,15 @@ rotation = -0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice43" parent="Ice" unique_id=1913051901 instance=ExtResource("4_chwpn")]
-position = Vector2(42638.008, 16631)
+position = Vector2(42544, 16632)
 rotation = 0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice44" parent="Ice" unique_id=547973883 instance=ExtResource("4_chwpn")]
-position = Vector2(43846, 16791)
+position = Vector2(43751.992, 16792)
 
 [node name="Ice45" parent="Ice" unique_id=136629253 instance=ExtResource("4_chwpn")]
-position = Vector2(45070, 16791)
+position = Vector2(44975.992, 16792)
 
 [node name="Ice46" parent="Ice" unique_id=267133308 instance=ExtResource("4_chwpn")]
 position = Vector2(46070.008, 16374.999)
@@ -360,11 +369,11 @@ process_material = SubResource("ParticleProcessMaterial_kry3j")
 position = Vector2(4712, 1832)
 
 [node name="Button2" parent="Buttons" unique_id=1966498234 instance=ExtResource("7_lsmp6")]
-position = Vector2(42800, 16600)
+position = Vector2(42881.992, 16649)
 rotation = 0.2617994
 
 [node name="Button3" parent="Buttons" unique_id=1483863189 instance=ExtResource("7_lsmp6")]
-position = Vector2(44526.008, 16719)
+position = Vector2(44576, 16720)
 
 [node name="Tutorials" type="Node" parent="." unique_id=651988572]
 
@@ -403,10 +412,10 @@ label_settings = SubResource("LabelSettings_kry3j")
 horizontal_alignment = 1
 
 [node name="GoodLuck" type="Label" parent="Tutorials" unique_id=475751452]
-offset_left = 41758.008
-offset_top = 16151.0
-offset_right = 41854.008
-offset_bottom = 16175.0
+offset_left = 41704.0
+offset_top = 16152.0
+offset_right = 41800.0
+offset_bottom = 16176.0
 text = "Good luck!"
 label_settings = SubResource("LabelSettings_kry3j")
 horizontal_alignment = 1
@@ -428,7 +437,7 @@ position = Vector2(39750.008, 16535)
 scale = Vector2(6.7599998, 3)
 
 [node name="TutorialTrigger5" parent="Tutorials" unique_id=1153291079 instance=ExtResource("7_6r07y")]
-position = Vector2(41806.008, 16287)
+position = Vector2(41752, 16288)
 scale = Vector2(1.8803489, 2.48)
 
 [node name="Trees" type="Node" parent="." unique_id=2135314435]
@@ -471,3 +480,23 @@ position = Vector2(2670.0002, 1309.9999)
 rotation = 0.5253441
 scale = Vector2(0.176, 0.176)
 texture = ExtResource("9_e3sih")
+
+[node name="Deathzones" type="Node" parent="." unique_id=1605569431]
+
+[node name="Deathzone" parent="Deathzones" unique_id=946865561 instance=ExtResource("11_af3po")]
+position = Vector2(13120, 6536)
+scale = Vector2(5.28, 1)
+
+[node name="Deathzone2" parent="Deathzones" unique_id=1731993347 instance=ExtResource("11_af3po")]
+position = Vector2(24800, 10880.001)
+rotation = 0.2617994
+scale = Vector2(28.159958, 0.99999994)
+
+[node name="Deathzone3" parent="Deathzones" unique_id=1110285827 instance=ExtResource("11_af3po")]
+position = Vector2(31711.998, 14672.001)
+rotation = 0.2617994
+scale = Vector2(11.799922, 0.99999994)
+
+[node name="Deathzone4" parent="Deathzones" unique_id=457895 instance=ExtResource("11_af3po")]
+position = Vector2(41744, 16632)
+scale = Vector2(4.8, 1)
