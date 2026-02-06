@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://bm8nv8oc85bnx"]
 
+[ext_resource type="Script" uid="uid://cnn3rqmv23d6o" path="res://scripts/start_1.gd" id="1_chwpn"]
 [ext_resource type="PackedScene" uid="uid://crlwsc5p4rqi" path="res://scenes/player.tscn" id="1_lsmp6"]
 [ext_resource type="PackedScene" uid="uid://cu0nhrlejvxn8" path="res://scenes/enemy.tscn" id="2_xrdnt"]
 [ext_resource type="PackedScene" uid="uid://dj63sccy5x0oo" path="res://scenes/safehouse.tscn" id="3_wrinw"]
 [ext_resource type="PackedScene" uid="uid://efqltw8plwwl" path="res://scenes/ice.tscn" id="4_chwpn"]
 [ext_resource type="Texture2D" uid="uid://beqptwo1ufhtj" path="res://assets/art/particle.png" id="5_af3po"]
 [ext_resource type="PackedScene" uid="uid://dneiw8unh562m" path="res://scenes/tutorial_trigger.tscn" id="7_6r07y"]
-[ext_resource type="PackedScene" uid="uid://0qo2kjjhtjav" path="res://scenes/button.tscn" id="7_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://mw4xckcdj22m" path="res://scenes/button.tscn" id="7_lsmp6"]
+[ext_resource type="FontFile" uid="uid://c2icmyk3kdg2c" path="res://assets/misc/Papernotes.ttf" id="8_7gny6"]
 [ext_resource type="Texture2D" uid="uid://c5uhoa5yeou17" path="res://assets/art/medium_tree.png" id="8_15mv3"]
 [ext_resource type="Texture2D" uid="uid://cbub0wrytms20" path="res://assets/art/large_tree.png" id="9_e3sih"]
+[ext_resource type="PackedScene" uid="uid://cp8g6d86vvnjs" path="res://scenes/deathzone.tscn" id="11_af3po"]
+[ext_resource type="Texture2D" uid="uid://dvh8b80wmkn6j" path="res://assets/art/sign.png" id="12_go7sj"]
 
 [sub_resource type="Curve" id="Curve_8gbba"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.250318, 1), 0.0, 0.0, 0, 0, Vector2(0.748412, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -28,13 +32,12 @@ scale_min = 0.07
 scale_max = 0.07
 scale_curve = SubResource("CurveTexture_xrdnt")
 
-[sub_resource type="LabelSettings" id="LabelSettings_jjvhh"]
-font_size = 17
-
 [sub_resource type="LabelSettings" id="LabelSettings_kry3j"]
-font_size = 17
+font = ExtResource("8_7gny6")
+font_size = 23
 
 [node name="Level1" type="Node2D" unique_id=702311018]
+script = ExtResource("1_chwpn")
 
 [node name="Player" parent="." unique_id=1014737346 instance=ExtResource("1_lsmp6")]
 z_index = 10
@@ -46,7 +49,15 @@ scale = Vector2(0.99999994, 0.99999994)
 position = Vector2(39838.008, 16695)
 
 [node name="Safehouse" parent="." unique_id=1020140978 instance=ExtResource("3_wrinw")]
-position = Vector2(45454.008, 16655)
+position = Vector2(45360, 16656)
+
+[node name="Background" type="ColorRect" parent="." unique_id=487363076]
+z_index = -1
+offset_left = -1136.0
+offset_top = -1160.0
+offset_right = 46648.0
+offset_bottom = 17304.0
+color = Color(0.33333334, 0.34901962, 0.4392157, 1)
 
 [node name="Ice" type="Node" parent="." unique_id=534667345]
 
@@ -232,15 +243,15 @@ rotation = -0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice43" parent="Ice" unique_id=1913051901 instance=ExtResource("4_chwpn")]
-position = Vector2(42638.008, 16631)
+position = Vector2(42544, 16632)
 rotation = 0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice44" parent="Ice" unique_id=547973883 instance=ExtResource("4_chwpn")]
-position = Vector2(43846, 16791)
+position = Vector2(43751.992, 16792)
 
 [node name="Ice45" parent="Ice" unique_id=136629253 instance=ExtResource("4_chwpn")]
-position = Vector2(45070, 16791)
+position = Vector2(44975.992, 16792)
 
 [node name="Ice46" parent="Ice" unique_id=267133308 instance=ExtResource("4_chwpn")]
 position = Vector2(46070.008, 16374.999)
@@ -354,6 +365,16 @@ process_material = SubResource("ParticleProcessMaterial_kry3j")
 
 [node name="Buttons" type="Node" parent="." unique_id=2026276513]
 
+[node name="Button" parent="Buttons" unique_id=1322701791 instance=ExtResource("7_lsmp6")]
+position = Vector2(4712, 1828)
+
+[node name="Button2" parent="Buttons" unique_id=1966498234 instance=ExtResource("7_lsmp6")]
+position = Vector2(42882.996, 16644)
+rotation = 0.2617994
+
+[node name="Button3" parent="Buttons" unique_id=1483863189 instance=ExtResource("7_lsmp6")]
+position = Vector2(44576, 16716)
+
 [node name="Tutorials" type="Node" parent="." unique_id=651988572]
 
 [node name="ButtonInfo" type="Label" parent="Tutorials" unique_id=1155674470]
@@ -362,7 +383,7 @@ offset_top = 1560.0
 offset_right = 5154.0
 offset_bottom = 1584.0
 text = "Press E when near buttons to activate them. Activate all three buttons to access the cabin at the end"
-label_settings = SubResource("LabelSettings_jjvhh")
+label_settings = SubResource("LabelSettings_kry3j")
 horizontal_alignment = 1
 
 [node name="TurningInfo" type="Label" parent="Tutorials" unique_id=1976488016]
@@ -390,12 +411,12 @@ text = "Watch out for enemies! Press E when near enemies to kill them. Killing a
 label_settings = SubResource("LabelSettings_kry3j")
 horizontal_alignment = 1
 
-[node name="GoodLuck" type="Label" parent="Tutorials" unique_id=475751452]
-offset_left = 41758.008
-offset_top = 16151.0
-offset_right = 41854.008
-offset_bottom = 16175.0
-text = "Good luck!"
+[node name="SignInfo" type="Label" parent="Tutorials" unique_id=475751452]
+offset_left = 41444.0
+offset_top = 16152.0
+offset_right = 42062.0
+offset_bottom = 16176.0
+text = "There are also signs to indacate a button up ahead. For example this sign!"
 label_settings = SubResource("LabelSettings_kry3j")
 horizontal_alignment = 1
 
@@ -416,53 +437,79 @@ position = Vector2(39750.008, 16535)
 scale = Vector2(6.7599998, 3)
 
 [node name="TutorialTrigger5" parent="Tutorials" unique_id=1153291079 instance=ExtResource("7_6r07y")]
-position = Vector2(41806.008, 16287)
-scale = Vector2(1.8803489, 2.48)
+position = Vector2(41752, 16288)
+scale = Vector2(3.42, 2.48)
 
-[node name="Button" parent="Tutorials" unique_id=1322701791 instance=ExtResource("7_lsmp6")]
-position = Vector2(4712, 1832)
+[node name="Trees" type="Node" parent="." unique_id=2135314435]
 
-[node name="Button2" parent="Tutorials" unique_id=1966498234 instance=ExtResource("7_lsmp6")]
-position = Vector2(35118.008, 15471)
-
-[node name="Button3" parent="Tutorials" unique_id=1483863189 instance=ExtResource("7_lsmp6")]
-position = Vector2(44526.008, 16719)
-
-[node name="MediumTree" type="Sprite2D" parent="." unique_id=2013963801]
+[node name="MediumTree" type="Sprite2D" parent="Trees" unique_id=2013963801]
 position = Vector2(765, 234)
-rotation = 0.23212878
+rotation = 0.2321288
 scale = Vector2(0.176, 0.176)
 texture = ExtResource("8_15mv3")
 
-[node name="MediumTree2" type="Sprite2D" parent="." unique_id=1391493026]
+[node name="MediumTree2" type="Sprite2D" parent="Trees" unique_id=1391493026]
 position = Vector2(1848.4921, 842.49207)
-rotation = 0.58119464
+rotation = 0.5811946
 scale = Vector2(0.176, 0.176)
 texture = ExtResource("8_15mv3")
 
-[node name="LargeTree" type="Sprite2D" parent="." unique_id=1412062707]
+[node name="LargeTree" type="Sprite2D" parent="Trees" unique_id=1412062707]
 z_index = 50
 position = Vector2(108.00001, 54)
 rotation = 0.116937056
-scale = Vector2(0.176, 0.176)
+scale = Vector2(0.17600001, 0.17600001)
 texture = ExtResource("9_e3sih")
 
-[node name="LargeTree2" type="Sprite2D" parent="." unique_id=1621208578]
+[node name="LargeTree2" type="Sprite2D" parent="Trees" unique_id=1621208578]
 z_index = 50
 position = Vector2(1434.0001, 596.99994)
-rotation = 0.52534413
+rotation = 0.5253441
 scale = Vector2(0.176, 0.176)
 texture = ExtResource("9_e3sih")
 
-[node name="LargeTree3" type="Sprite2D" parent="." unique_id=1864823357]
+[node name="LargeTree3" type="Sprite2D" parent="Trees" unique_id=1864823357]
 z_index = 50
 position = Vector2(2606, 1277)
-rotation = 0.52534413
+rotation = 0.5253441
 scale = Vector2(0.176, 0.176)
 texture = ExtResource("9_e3sih")
 
-[node name="LargeTree4" type="Sprite2D" parent="." unique_id=383919228]
+[node name="LargeTree4" type="Sprite2D" parent="Trees" unique_id=383919228]
 position = Vector2(2670.0002, 1309.9999)
-rotation = 0.52534413
+rotation = 0.5253441
 scale = Vector2(0.176, 0.176)
 texture = ExtResource("9_e3sih")
+
+[node name="Deathzones" type="Node" parent="." unique_id=1605569431]
+
+[node name="Deathzone" parent="Deathzones" unique_id=946865561 instance=ExtResource("11_af3po")]
+position = Vector2(13120, 6536)
+scale = Vector2(5.28, 1)
+
+[node name="Deathzone2" parent="Deathzones" unique_id=1731993347 instance=ExtResource("11_af3po")]
+position = Vector2(24800, 10880.001)
+rotation = 0.2617994
+scale = Vector2(28.159958, 0.99999994)
+
+[node name="Deathzone3" parent="Deathzones" unique_id=1110285827 instance=ExtResource("11_af3po")]
+position = Vector2(31711.998, 14672.001)
+rotation = 0.2617994
+scale = Vector2(11.799922, 0.99999994)
+
+[node name="Deathzone4" parent="Deathzones" unique_id=457895 instance=ExtResource("11_af3po")]
+position = Vector2(41744, 16632)
+scale = Vector2(4.8, 1)
+
+[node name="Sign" type="Sprite2D" parent="." unique_id=466965069]
+z_index = 5
+position = Vector2(42023.996, 16399)
+rotation = 0.2443461
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("12_go7sj")
+
+[node name="Sign2" type="Sprite2D" parent="." unique_id=44306979]
+z_index = 5
+position = Vector2(43639.996, 16691)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("12_go7sj")

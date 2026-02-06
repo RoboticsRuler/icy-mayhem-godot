@@ -1,8 +1,6 @@
 extends RigidBody2D
 
 var jump_velocity = -600
-var buttons_pressed: int = 0
-var enemies_killed = 0
 var is_on_ground
 var can_finish_lvl = false
 var interactable: Area2D = null
@@ -16,7 +14,7 @@ func _process(delta: float) -> void:
 
 	# Dive
 	if Input.is_action_pressed("dive") and not is_on_ground:
-		linear_velocity.y += 10
+		linear_velocity.y += 12
 
 	# Exit level
 	if Input.is_action_just_pressed("exit"):
@@ -28,12 +26,12 @@ func _process(delta: float) -> void:
 	# Kill enemy
 	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Enemy"):
 		interactable.queue_free()
-		enemies_killed += 1
+		LevelData.enemies_killed += 1
 
 	# Interact with button
 	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Button"):
-		interactable.queue_free()
-		buttons_pressed += 1
+		interactable.activate()
+		LevelData.buttons_activated += 1
 
 	# Get player's rotation input
 	var rotation_dir = Input.get_axis("left", "right")
@@ -56,9 +54,9 @@ func _process(delta: float) -> void:
 	elif not $GroundDetector1.is_colliding():
 		is_on_ground = false
 
-	if buttons_pressed == 3:
+	if LevelData.buttons_activated == 3:
 		can_finish_lvl = true
-	elif not buttons_pressed == 3:
+	elif not LevelData.buttons_activated == 3:
 		can_finish_lvl = false
 
 # Detect if player lands on their head
@@ -83,9 +81,18 @@ func _on_interact_detection_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Tutorial Trigger"):
 		Engine.time_scale = 0.1
 
+	if area.is_in_group("Deathzone"):
+		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 	# Enter safehouse if player is able to
 	if area.is_in_group("Safehouse") and can_finish_lvl:
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	elif area.is_in_group("Safehouse") and not can_finish_lvl:
+		get_tree().paused = true
+		var go_scene = load("res://scenes/game_over.tscn").instantiate()
+		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 # Interaction exiting detection

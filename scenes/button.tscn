@@ -1,21 +1,18 @@
-[gd_scene format=3 uid="uid://0qo2kjjhtjav"]
+[gd_scene format=3 uid="uid://mw4xckcdj22m"]
+
+[ext_resource type="Texture2D" uid="uid://nwdc1vwmmnrs" path="res://assets/art/button.png" id="1_mi6dp"]
+[ext_resource type="Script" uid="uid://3inmc6156582" path="res://scripts/button.gd" id="1_rhj8v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0vvm8"]
 size = Vector2(80, 24)
 
-[sub_resource type="BoxMesh" id="BoxMesh_r04n3"]
-
 [node name="Button" type="Area2D" unique_id=1322701791 groups=["Button"]]
+script = ExtResource("1_rhj8v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1410328896]
+position = Vector2(0, -23.49)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_mi6dp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2118539216]
 shape = SubResource("RectangleShape2D_0vvm8")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=243185767]
-position = Vector2(-1.1920929e-06, 4)
-scale = Vector2(63.999996, 8)
-mesh = SubResource("BoxMesh_r04n3")
-
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=606995619]
-position = Vector2(2.3841858e-07, -4)
-scale = Vector2(48.000004, 8)
-mesh = SubResource("BoxMesh_r04n3")
