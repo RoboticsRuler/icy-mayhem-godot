@@ -81,9 +81,18 @@ func _on_interact_detection_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Tutorial Trigger"):
 		Engine.time_scale = 0.1
 
+	if area.is_in_group("Deathzone"):
+		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 	# Enter safehouse if player is able to
 	if area.is_in_group("Safehouse") and can_finish_lvl:
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	elif area.is_in_group("Safehouse") and not can_finish_lvl:
+		get_tree().paused = true
+		var go_scene = load("res://scenes/game_over.tscn").instantiate()
+		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 # Interaction exiting detection
