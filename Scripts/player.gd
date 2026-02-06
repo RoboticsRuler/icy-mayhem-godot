@@ -87,7 +87,7 @@ func _on_interact_detection_area_entered(area: Area2D) -> void:
 
 	# Enter safehouse if player is able to
 	if area.is_in_group("Safehouse") and can_finish_lvl:
-		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/main_menu.tscn")
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	elif area.is_in_group("Safehouse") and not can_finish_lvl:
 		get_tree().paused = true
