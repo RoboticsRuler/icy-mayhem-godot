@@ -3,7 +3,7 @@ extends RigidBody2D
 var jump_velocity = -600
 var is_on_ground
 var can_finish_lvl = false
-var pressed_button
+var is_button_pressed
 var interactable: Area2D = null
 
 # Called when the node enters the scene tree for the first time.
@@ -32,10 +32,8 @@ func _process(delta: float) -> void:
 	# Interact with button
 	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Button"):
 		interactable.activate()
-		pressed_button = true
 		LevelData.buttons_activated += 1
-	elif not interactable == null and not pressed_button:
-		pressed_button = false
+		is_button_pressed = true
 
 	# Get player's rotation input
 	var rotation_dir = Input.get_axis("left", "right")
@@ -49,13 +47,25 @@ func _process(delta: float) -> void:
 	# Detect ground collision with GroundDetector1
 	if $GroundDetector1.is_colliding():
 		is_on_ground = true
-	elif not $GroundDetector2.is_colliding():
+	elif not $GroundDetector2.is_colliding() and not $GroundDetector3.is_colliding() and not $GroundDetector4.is_colliding():
 		is_on_ground = false
 
 	# Detect ground collision with GroundDetector2
 	if $GroundDetector2.is_colliding():
 		is_on_ground = true
-	elif not $GroundDetector1.is_colliding():
+	elif not $GroundDetector1.is_colliding() and not $GroundDetector3.is_colliding() and not $GroundDetector4.is_colliding():
+		is_on_ground = false
+
+	# Detect ground collision with GroundDetector3
+	if $GroundDetector3.is_colliding():
+		is_on_ground = true
+	elif not $GroundDetector1.is_colliding() and not $GroundDetector2.is_colliding() and not $GroundDetector4.is_colliding():
+		is_on_ground = false
+
+	# Detect ground collision with GroundDetector4
+	if $GroundDetector4.is_colliding():
+		is_on_ground = true
+	elif not $GroundDetector1.is_colliding() and not $GroundDetector2.is_colliding() and not $GroundDetector3.is_colliding():
 		is_on_ground = false
 
 	if LevelData.buttons_activated == 3:
@@ -64,7 +74,7 @@ func _process(delta: float) -> void:
 		can_finish_lvl = false
 
 # Detect if player lands on their head
-func _on_head_detection_area_entered(area: Area2D) -> void:
+func _on_death_detection_area_entered(area: Area2D) -> void:
 # Player dies if they land on their head
 	if area.is_in_group("Ice"):
 		get_tree().paused = true
@@ -72,15 +82,10 @@ func _on_head_detection_area_entered(area: Area2D) -> void:
 		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
-# Detect if player is not on ground
-func _on_ground_detection_area_exited(area: Area2D) -> void:
-	if area.is_in_group("Ice"):
-		is_on_ground = false
-
 # Interaction entrance detection
 func _on_interact_detection_area_entered(area: Area2D) -> void:
 	interactable = area
-	pressed_button = false
+	is_button_pressed = false
 
 	# If player enters a tutorial trigger, slow down time
 	if area.is_in_group("Tutorial Trigger"):
@@ -108,7 +113,7 @@ func _on_interact_detection_area_exited(area: Area2D) -> void:
 	if area.is_in_group("Tutorial Trigger"):
 		Engine.time_scale = 1
 
-	if area.is_in_group("Button") and not pressed_button:
+	if area.is_in_group("Button") and is_button_pressed == false:
 		get_tree().paused = true
 		var go_scene = load("res://scenes/game_over.tscn").instantiate()
 		get_tree().root.add_child(go_scene)
