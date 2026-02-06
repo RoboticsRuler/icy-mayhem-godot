@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 
 	# Dive
 	if Input.is_action_pressed("dive") and not is_on_ground:
-		linear_velocity.y += 12
+		apply_central_impulse(Vector2(0, 1.5))
 
 	# Exit level
 	if Input.is_action_just_pressed("exit"):
