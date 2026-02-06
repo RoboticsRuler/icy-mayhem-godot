@@ -49,14 +49,14 @@ scale = Vector2(0.99999994, 0.99999994)
 position = Vector2(39838.008, 16695)
 
 [node name="Safehouse" parent="." unique_id=1020140978 instance=ExtResource("3_wrinw")]
-position = Vector2(45360, 16656)
+position = Vector2(45324.07, 16655.07)
 
 [node name="Background" type="ColorRect" parent="." unique_id=487363076]
 z_index = -1
-offset_left = -1108.0
-offset_top = -706.0
-offset_right = 46676.0
-offset_bottom = 17758.0
+offset_left = -1184.0
+offset_top = -1400.0
+offset_right = 46600.0
+offset_bottom = 17064.0
 color = Color(0.33333334, 0.34901962, 0.4392157, 1)
 
 [node name="Ice" type="Node" parent="." unique_id=534667345]
@@ -180,17 +180,17 @@ rotation = -1.0471976
 scale = Vector2(9.600001, 1)
 
 [node name="Ice47" parent="Ice" unique_id=1772028536 instance=ExtResource("4_chwpn")]
-position = Vector2(25888.002, 11472)
+position = Vector2(25528, 11672)
+rotation = 0.7853982
+scale = Vector2(9.600001, 1)
+
+[node name="Ice49" parent="Ice" unique_id=2056866227 instance=ExtResource("4_chwpn")]
+position = Vector2(26488.002, 12408)
 rotation = 0.5235988
 scale = Vector2(9.600001, 1)
 
-[node name="Ice48" parent="Ice" unique_id=1442616188 instance=ExtResource("4_chwpn")]
-position = Vector2(27823, 13678.999)
-rotation = 0.87266463
-scale = Vector2(9.600001, 1)
-
 [node name="Ice31" parent="Ice" unique_id=962295161 instance=ExtResource("4_chwpn")]
-position = Vector2(28782, 14295.001)
+position = Vector2(28784.002, 14296.001)
 rotation = 0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
@@ -203,7 +203,7 @@ rotation = -0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice34" parent="Ice" unique_id=1632573731 instance=ExtResource("4_chwpn")]
-position = Vector2(32766.004, 13679)
+position = Vector2(32768, 13768)
 rotation = -1.5707964
 
 [node name="Ice35" parent="Ice" unique_id=511257388 instance=ExtResource("4_chwpn")]
@@ -243,18 +243,18 @@ rotation = -0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice43" parent="Ice" unique_id=1913051901 instance=ExtResource("4_chwpn")]
-position = Vector2(42544, 16632)
+position = Vector2(42508.07, 16631.072)
 rotation = 0.2617994
 scale = Vector2(9.600002, 0.99999994)
 
 [node name="Ice44" parent="Ice" unique_id=547973883 instance=ExtResource("4_chwpn")]
-position = Vector2(43751.992, 16792)
+position = Vector2(43716.063, 16791.07)
 
 [node name="Ice45" parent="Ice" unique_id=136629253 instance=ExtResource("4_chwpn")]
-position = Vector2(44975.992, 16792)
+position = Vector2(44940.063, 16791.07)
 
 [node name="Ice46" parent="Ice" unique_id=267133308 instance=ExtResource("4_chwpn")]
-position = Vector2(46070.008, 16374.999)
+position = Vector2(46034.08, 16374.073)
 rotation = -0.7853982
 
 [node name="Snow" type="Node" parent="." unique_id=1301722276]
@@ -369,10 +369,10 @@ process_material = SubResource("ParticleProcessMaterial_kry3j")
 position = Vector2(4712, 1828)
 
 [node name="Button2" parent="Buttons" unique_id=1966498234 instance=ExtResource("7_lsmp6")]
-position = Vector2(22592, 10212)
+position = Vector2(22624, 10216)
 
 [node name="Button3" parent="Buttons" unique_id=1483863189 instance=ExtResource("7_lsmp6")]
-position = Vector2(44576, 16716)
+position = Vector2(44540.07, 16715.07)
 
 [node name="Tutorials" type="Node" parent="." unique_id=651988572]
 
@@ -382,6 +382,15 @@ offset_top = 1560.0
 offset_right = 5154.0
 offset_bottom = 1584.0
 text = "Press E when near buttons to activate them. Activate all three buttons to access the cabin at the end"
+label_settings = SubResource("LabelSettings_kry3j")
+horizontal_alignment = 1
+
+[node name="SignInfo" type="Label" parent="Tutorials" unique_id=475751452]
+offset_left = 12813.0
+offset_top = 6020.0
+offset_right = 13431.0
+offset_bottom = 6044.0
+text = "There are also signs that indicate a button up ahead. Watch out for them!"
 label_settings = SubResource("LabelSettings_kry3j")
 horizontal_alignment = 1
 
@@ -410,20 +419,11 @@ text = "Watch out for enemies! Press E when near enemies to kill them. Killing a
 label_settings = SubResource("LabelSettings_kry3j")
 horizontal_alignment = 1
 
-[node name="SignInfo" type="Label" parent="Tutorials" unique_id=475751452]
-offset_left = 12813.0
-offset_top = 6020.0
-offset_right = 13431.0
-offset_bottom = 6044.0
-text = "There are also signs to indacate a button up ahead. Watch out for them!"
-label_settings = SubResource("LabelSettings_kry3j")
-horizontal_alignment = 1
-
 [node name="GoodLuck" type="Label" parent="Tutorials" unique_id=2083660559]
-offset_left = 41651.0
-offset_top = 16130.0
-offset_right = 41864.0
-offset_bottom = 16152.0
+offset_left = 41624.0
+offset_top = 16128.0
+offset_right = 41840.0
+offset_bottom = 16150.0
 text = "Good luck, and have fun!!"
 label_settings = SubResource("LabelSettings_kry3j")
 horizontal_alignment = 1
@@ -449,8 +449,8 @@ position = Vector2(13121, 6156.0005)
 scale = Vector2(3.41, 2.48)
 
 [node name="TutorialTrigger6" parent="Tutorials" unique_id=1060508709 instance=ExtResource("7_6r07y")]
-position = Vector2(41756, 16260.999)
-scale = Vector2(2.68, 2.48)
+position = Vector2(41732, 16261)
+scale = Vector2(2.144, 2.48)
 
 [node name="Trees" type="Node" parent="." unique_id=2135314435]
 
@@ -500,9 +500,9 @@ position = Vector2(13120, 6536)
 scale = Vector2(5.28, 1)
 
 [node name="Deathzone2" parent="Deathzones" unique_id=383016583 instance=ExtResource("11_af3po")]
-position = Vector2(24823.998, 11944)
+position = Vector2(25391.998, 12664)
 rotation = 0.5235988
-scale = Vector2(47.93582, 1)
+scale = Vector2(49.83963, 1)
 
 [node name="Deathzone3" parent="Deathzones" unique_id=1110285827 instance=ExtResource("11_af3po")]
 position = Vector2(31711.998, 14672.001)
@@ -510,19 +510,19 @@ rotation = 0.2617994
 scale = Vector2(11.799922, 0.99999994)
 
 [node name="Deathzone4" parent="Deathzones" unique_id=457895 instance=ExtResource("11_af3po")]
-position = Vector2(41744, 16632)
-scale = Vector2(4.8, 1)
+position = Vector2(41720, 16632)
+scale = Vector2(3.8400002, 1)
 
 [node name="Sign" type="Sprite2D" parent="." unique_id=466965069]
 z_index = 5
-position = Vector2(18742, 8266)
+position = Vector2(19440, 8960)
 rotation = -18.064157
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("12_go7sj")
 
 [node name="Sign2" type="Sprite2D" parent="." unique_id=44306979]
 z_index = 5
-position = Vector2(42113, 16422)
+position = Vector2(42077.07, 16421.07)
 rotation = 0.23212878
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("12_go7sj")
