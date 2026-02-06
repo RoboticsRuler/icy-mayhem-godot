@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://6cyarsi2s2s"]
 
 [ext_resource type="PackedScene" uid="uid://crlwsc5p4rqi" path="res://Scenes/player.tscn" id="1_smnlx"]
+[ext_resource type="Script" uid="uid://bejirjfke4cii" path="res://Scripts/start_2.gd" id="1_uhnj4"]
 [ext_resource type="PackedScene" uid="uid://efqltw8plwwl" path="res://Scenes/ice.tscn" id="2_12fag"]
 [ext_resource type="PackedScene" uid="uid://mw4xckcdj22m" path="res://Scenes/button.tscn" id="3_12fag"]
 [ext_resource type="Texture2D" uid="uid://beqptwo1ufhtj" path="res://assets/art/particle.png" id="4_cggpd"]
@@ -28,6 +29,7 @@ scale_max = 0.07
 scale_curve = SubResource("CurveTexture_jjvhh")
 
 [node name="Level2" type="Node2D" unique_id=325586776]
+script = ExtResource("1_uhnj4")
 
 [node name="Player" parent="." unique_id=1014737346 instance=ExtResource("1_smnlx")]
 position = Vector2(-1.9073489e-06, 1.5258789e-05)
@@ -84,6 +86,11 @@ scale = Vector2(9.600002, 0.99999994)
 [node name="Ice7" parent="Ice" unique_id=1639160522 instance=ExtResource("2_12fag")]
 position = Vector2(6751.9995, 2552)
 rotation = -0.2617994
+scale = Vector2(9.600002, 0.9999999)
+
+[node name="Ice44" parent="Ice" unique_id=1843394240 instance=ExtResource("2_12fag")]
+position = Vector2(8624, 2072.0002)
+rotation = 1.5707964
 scale = Vector2(9.600002, 0.9999999)
 
 [node name="Ice9" parent="Ice" unique_id=1417466377 instance=ExtResource("2_12fag")]
@@ -216,7 +223,7 @@ rotation = 0.5235988
 scale = Vector2(9.600002, 0.9999999)
 
 [node name="Ice43" parent="Ice" unique_id=1799909435 instance=ExtResource("2_12fag")]
-position = Vector2(37824, 11384.001)
+position = Vector2(37824, 11352)
 rotation = 1.5707964
 scale = Vector2(9.600002, 0.9999999)
 
@@ -257,6 +264,7 @@ scale = Vector2(9.600001, 0.99999994)
 position = Vector2(1688, 344)
 rotation = 1.5707964
 scale = Vector2(3, 3)
+emitting = false
 amount = 700
 texture = ExtResource("4_cggpd")
 lifetime = 10.0
@@ -269,6 +277,7 @@ process_material = SubResource("ParticleProcessMaterial_2mgoq")
 position = Vector2(6800, 2640)
 rotation = 1.5707964
 scale = Vector2(3, 3)
+emitting = false
 amount = 700
 texture = ExtResource("4_cggpd")
 lifetime = 10.0
@@ -281,6 +290,7 @@ process_material = SubResource("ParticleProcessMaterial_2mgoq")
 position = Vector2(12264, 5048.0005)
 rotation = 1.5707964
 scale = Vector2(3, 3)
+emitting = false
 amount = 700
 texture = ExtResource("4_cggpd")
 lifetime = 10.0
@@ -293,6 +303,7 @@ process_material = SubResource("ParticleProcessMaterial_2mgoq")
 position = Vector2(18136, 6688)
 rotation = 1.5707964
 scale = Vector2(3, 3)
+emitting = false
 amount = 700
 texture = ExtResource("4_cggpd")
 lifetime = 10.0
@@ -305,6 +316,7 @@ process_material = SubResource("ParticleProcessMaterial_2mgoq")
 position = Vector2(23720, 7936.001)
 rotation = 1.5707964
 scale = Vector2(3, 3)
+emitting = false
 amount = 700
 texture = ExtResource("4_cggpd")
 lifetime = 10.0
@@ -317,6 +329,7 @@ process_material = SubResource("ParticleProcessMaterial_2mgoq")
 position = Vector2(29648, 10272)
 rotation = 1.5707964
 scale = Vector2(3, 3)
+emitting = false
 amount = 700
 texture = ExtResource("4_cggpd")
 lifetime = 10.0
@@ -329,6 +342,7 @@ process_material = SubResource("ParticleProcessMaterial_2mgoq")
 position = Vector2(35520, 11559.999)
 rotation = 1.5707964
 scale = Vector2(3, 3)
+emitting = false
 amount = 700
 texture = ExtResource("4_cggpd")
 lifetime = 10.0
@@ -341,6 +355,7 @@ process_material = SubResource("ParticleProcessMaterial_2mgoq")
 position = Vector2(40032, 11904.001)
 rotation = 1.5707964
 scale = Vector2(3, 3)
+emitting = false
 amount = 700
 texture = ExtResource("4_cggpd")
 lifetime = 10.0
