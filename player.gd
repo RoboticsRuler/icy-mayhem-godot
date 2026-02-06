@@ -3,6 +3,7 @@ extends RigidBody2D
 var is_on_ground
 var can_finish_lvl = false
 var is_button_pressed
+var can_press_button
 var interactable: Area2D = null
 
 # Called when the node enters the scene tree for the first time.
@@ -29,17 +30,18 @@ func _process(delta: float) -> void:
 		LevelData.enemies_killed += 1
 
 	# Interact with button
-	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Button"):
+	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Button") and can_press_button: 
 		interactable.activate()
 		LevelData.buttons_activated += 1
 		is_button_pressed = true
+		can_press_button = false
 
 	# Get player's rotation input
 	var rotation_dir = Input.get_axis("left", "right")
 
 	# Rotate sled when player is in air and gives input
 	if not is_on_ground and rotation_dir:
-		angular_velocity += rotation_dir * delta * 3.5
+		angular_velocity += rotation_dir * delta * 4
 	elif is_on_ground:
 		pass
 
@@ -85,6 +87,7 @@ func _on_death_detection_area_entered(area: Area2D) -> void:
 func _on_interact_detection_area_entered(area: Area2D) -> void:
 	interactable = area
 	is_button_pressed = false
+	can_press_button = true
 
 	# If player enters a tutorial trigger, slow down time
 	if area.is_in_group("Tutorial Trigger"):
