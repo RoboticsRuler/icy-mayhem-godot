@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://d0k7xy3m3dp5u"]
+
+[ext_resource type="Script" uid="uid://ca0sil62y4m41" path="res://Scripts/game_over.gd" id="1_tbwuq"]
+[ext_resource type="Shader" uid="uid://8gijwig1lwnp" path="res://assets/misc/blur_tint.gdshader" id="2_racf3"]
+[ext_resource type="FontFile" uid="uid://c2icmyk3kdg2c" path="res://assets/misc/Papernotes.ttf" id="2_tbwuq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7m3ot"]
+shader = ExtResource("2_racf3")
+shader_parameter/blur_amount = 2.0
+shader_parameter/tint_color = Color(0, 0, 0, 0.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbwuq"]
+bg_color = Color(0.49411765, 0.5176471, 0.6509804, 1)
+border_width_top = 25
+border_width_bottom = 25
+border_color = Color(0.494, 0.51739997, 0.65, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0, 0, 0, 0.156863)
+shadow_size = 10
+shadow_offset = Vector2(10, 15)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_racf3"]
+bg_color = Color(0.40320003, 0.42672002, 0.56, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0, 0, 0, 0.156863)
+shadow_size = 10
+shadow_offset = Vector2(10, 15)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7m3ot"]
+bg_color = Color(0.55480003, 0.58108, 0.73, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0, 0, 0, 0.156863)
+shadow_size = 10
+shadow_offset = Vector2(10, 15)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v3hpu"]
+
+[node name="Game Over" type="CanvasLayer" unique_id=780240879]
+process_mode = 3
+layer = 100
+script = ExtResource("1_tbwuq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=886981820]
+material = SubResource("ShaderMaterial_7m3ot")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1053215423]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.5
+offset_top = -192.5
+offset_right = 542.5
+offset_bottom = 192.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer" unique_id=1698863850]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tbwuq")
+theme_override_font_sizes/font_size = 250
+text = "Game Over!"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer" unique_id=1711536752]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 50
+
+[node name="Restart" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=1819699036]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_tbwuq")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = SubResource("StyleBoxFlat_tbwuq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_racf3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7m3ot")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v3hpu")
+text = "Restart"
+
+[node name="Exit" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=1762904559]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_tbwuq")
+theme_override_font_sizes/font_size = 110
+theme_override_styles/normal = SubResource("StyleBoxFlat_tbwuq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_racf3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7m3ot")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v3hpu")
+text = "Exit"
+
+[node name="KillCounter" type="Label" parent="." unique_id=1589023950]
+offset_left = 64.0
+offset_top = 1272.0
+offset_right = 384.0
+offset_bottom = 1376.0
+theme_override_fonts/font = ExtResource("2_tbwuq")
+theme_override_font_sizes/font_size = 110
+text = "Kills: 0"
+vertical_alignment = 1
+
+[node name="ButtonCounter" type="Label" parent="." unique_id=434363868]
+offset_left = 64.0
+offset_top = 1160.0
+offset_right = 444.0
+offset_bottom = 1264.0
+theme_override_fonts/font = ExtResource("2_tbwuq")
+theme_override_font_sizes/font_size = 110
+text = "Buttons: 0"
+vertical_alignment = 1
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/Exit" to="." method="_on_exit_pressed"]
