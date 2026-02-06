@@ -53,10 +53,10 @@ position = Vector2(45360, 16656)
 
 [node name="Background" type="ColorRect" parent="." unique_id=487363076]
 z_index = -1
-offset_left = -1136.0
-offset_top = -1160.0
-offset_right = 46648.0
-offset_bottom = 17304.0
+offset_left = -1108.0
+offset_top = -706.0
+offset_right = 46676.0
+offset_bottom = 17758.0
 color = Color(0.33333334, 0.34901962, 0.4392157, 1)
 
 [node name="Ice" type="Node" parent="." unique_id=534667345]
@@ -369,8 +369,7 @@ process_material = SubResource("ParticleProcessMaterial_kry3j")
 position = Vector2(4712, 1828)
 
 [node name="Button2" parent="Buttons" unique_id=1966498234 instance=ExtResource("7_lsmp6")]
-position = Vector2(42882.996, 16644)
-rotation = 0.2617994
+position = Vector2(22399, 10212)
 
 [node name="Button3" parent="Buttons" unique_id=1483863189 instance=ExtResource("7_lsmp6")]
 position = Vector2(44576, 16716)
@@ -412,11 +411,20 @@ label_settings = SubResource("LabelSettings_kry3j")
 horizontal_alignment = 1
 
 [node name="SignInfo" type="Label" parent="Tutorials" unique_id=475751452]
-offset_left = 41444.0
-offset_top = 16152.0
-offset_right = 42062.0
-offset_bottom = 16176.0
-text = "There are also signs to indacate a button up ahead. For example this sign!"
+offset_left = 12813.0
+offset_top = 6020.0
+offset_right = 13431.0
+offset_bottom = 6044.0
+text = "There are also signs to indacate a button up ahead. Watch out for them!"
+label_settings = SubResource("LabelSettings_kry3j")
+horizontal_alignment = 1
+
+[node name="GoodLuck" type="Label" parent="Tutorials" unique_id=2083660559]
+offset_left = 41651.0
+offset_top = 16130.0
+offset_right = 41864.0
+offset_bottom = 16152.0
+text = "Good luck, and have fun!!"
 label_settings = SubResource("LabelSettings_kry3j")
 horizontal_alignment = 1
 
@@ -437,8 +445,12 @@ position = Vector2(39750.008, 16535)
 scale = Vector2(6.7599998, 3)
 
 [node name="TutorialTrigger5" parent="Tutorials" unique_id=1153291079 instance=ExtResource("7_6r07y")]
-position = Vector2(41752, 16288)
-scale = Vector2(3.42, 2.48)
+position = Vector2(13121, 6156.0005)
+scale = Vector2(3.41, 2.48)
+
+[node name="TutorialTrigger6" parent="Tutorials" unique_id=1060508709 instance=ExtResource("7_6r07y")]
+position = Vector2(41756, 16260.999)
+scale = Vector2(2.68, 2.48)
 
 [node name="Trees" type="Node" parent="." unique_id=2135314435]
 
@@ -503,13 +515,14 @@ scale = Vector2(4.8, 1)
 
 [node name="Sign" type="Sprite2D" parent="." unique_id=466965069]
 z_index = 5
-position = Vector2(42023.996, 16399)
-rotation = 0.2443461
+position = Vector2(18742, 8266)
+rotation = -18.064157
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("12_go7sj")
 
 [node name="Sign2" type="Sprite2D" parent="." unique_id=44306979]
 z_index = 5
-position = Vector2(43639.996, 16691)
+position = Vector2(42113, 16422)
+rotation = 0.23212878
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("12_go7sj")
