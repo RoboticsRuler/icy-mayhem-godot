@@ -20,7 +20,7 @@ texture = ExtResource("1_3vyb7")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=328482262]
 offset = Vector2(0, -64)
-zoom = Vector2(1.4, 1.4)
+zoom = Vector2(1.8, 1.8)
 
 [node name="SleighCollider" type="CollisionPolygon2D" parent="." unique_id=1621227697]
 polygon = PackedVector2Array(34, 24, -32, 24, -41, 21.5, -42.3, 18.8, -35.2, 5, -41.1, -16.6, -45.5, -19.3, -45, -24.2, -41.5, -27.6, 30, -29.2, 33.4, -24.5, 29.8, -12.3, 35.7, -9.2, 41.5, 0, 40.6, 9, 44.6, 12.6, 45.7, 17.4, 42.3, 22)
