@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cp8g6d86vvnjs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlhok"]
+size = Vector2(128, 128)
+
+[node name="Deathzone" type="Area2D" unique_id=946865561 groups=["Deathzone"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1146922431]
+shape = SubResource("RectangleShape2D_wlhok")
