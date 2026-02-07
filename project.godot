@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 LevelData="*uid://bmx1ud7qlxd2p"
+Counters="*uid://bqdnd61hf48kq"
+CounterController="*uid://b3h4wqe37xrni"
 
 [display]
 

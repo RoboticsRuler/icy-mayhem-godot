@@ -28,11 +28,13 @@ func _process(delta: float) -> void:
 	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Enemy"):
 		interactable.queue_free()
 		LevelData.enemies_killed += 1
+		CounterController.update_ui_text()
 
 	# Interact with button
 	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Button") and can_press_button: 
 		interactable.activate()
 		LevelData.buttons_activated += 1
+		CounterController.update_ui_text()
 		is_button_pressed = true
 		can_press_button = false
 
