@@ -1,13 +1,14 @@
-[gd_scene format=3 uid="uid://bg8cb0syjcpqe"]
+[gd_scene format=3 uid="uid://dbtcokefyshat"]
 
-[ext_resource type="Script" uid="uid://ct1vud3icbgh5" path="res://Scripts/start_3.gd" id="1_53xsp"]
-[ext_resource type="PackedScene" uid="uid://crlwsc5p4rqi" path="res://scenes/player.tscn" id="1_g5cw1"]
-[ext_resource type="PackedScene" uid="uid://efqltw8plwwl" path="res://Scenes/ice.tscn" id="2_76ybr"]
-[ext_resource type="PackedScene" uid="uid://0qo2kjjhtjav" path="res://Scenes/button.tscn" id="3_76ybr"]
+[ext_resource type="Script" uid="uid://ct1vud3icbgh5" path="res://scripts/start_3.gd" id="1_53xsp"]
+[ext_resource type="PackedScene" uid="uid://bebsjigdnt12x" path="res://scenes/player.tscn" id="1_g5cw1"]
+[ext_resource type="PackedScene" uid="uid://efqltw8plwwl" path="res://scenes/ice.tscn" id="2_76ybr"]
+[ext_resource type="PackedScene" uid="uid://cet067uopa1y4" path="res://scenes/button.tscn" id="3_76ybr"]
 [ext_resource type="Texture2D" uid="uid://beqptwo1ufhtj" path="res://assets/art/particle.png" id="4_qf6rc"]
-[ext_resource type="PackedScene" uid="uid://dj63sccy5x0oo" path="res://Scenes/safehouse.tscn" id="4_s8nj6"]
-[ext_resource type="PackedScene" uid="uid://cu0nhrlejvxn8" path="res://Scenes/enemy.tscn" id="5_vwg62"]
-[ext_resource type="PackedScene" uid="uid://cp8g6d86vvnjs" path="res://Scenes/deathzone.tscn" id="8_5e78q"]
+[ext_resource type="PackedScene" uid="uid://vc7w62ktrh6n" path="res://scenes/safehouse.tscn" id="4_s8nj6"]
+[ext_resource type="PackedScene" uid="uid://cu0nhrlejvxn8" path="res://scenes/enemy.tscn" id="5_vwg62"]
+[ext_resource type="PackedScene" uid="uid://cp8g6d86vvnjs" path="res://scenes/deathzone.tscn" id="8_5e78q"]
+[ext_resource type="Texture2D" uid="uid://dvh8b80wmkn6j" path="res://assets/art/sign.png" id="9_l4wr6"]
 
 [sub_resource type="Curve" id="Curve_53xsp"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.250318, 1), 0.0, 0.0, 0, 0, Vector2(0.748412, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -38,6 +39,14 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="Safehouse" parent="." unique_id=1020140978 instance=ExtResource("4_s8nj6")]
 z_index = 1
 position = Vector2(46879.996, 14519.999)
+
+[node name="Background" type="ColorRect" parent="." unique_id=1079038938]
+z_index = -5
+offset_left = -1016.0
+offset_top = -760.0
+offset_right = 48064.0
+offset_bottom = 14976.0
+color = Color(0.33333334, 0.34901962, 0.4392157, 1)
 
 [node name="Ice" type="Node" parent="." unique_id=145859018]
 
@@ -270,7 +279,7 @@ rotation = -0.7853982
 scale = Vector2(9.600002, 0.9999999)
 
 [node name="Ice61" parent="Ice" unique_id=286752683 instance=ExtResource("2_76ybr")]
-position = Vector2(43520.004, 13399.999)
+position = Vector2(43584.004, 13415.999)
 rotation = 1.5707964
 scale = Vector2(9.600002, 0.9999998)
 
@@ -442,3 +451,22 @@ scale = Vector2(8.98461, 0.99999994)
 [node name="Deathzone5" parent="Deathzones" unique_id=1556481911 instance=ExtResource("8_5e78q")]
 position = Vector2(42592, 14488)
 scale = Vector2(14.556093, 0.99999994)
+
+[node name="Sign" type="Sprite2D" parent="." unique_id=1264955011]
+z_index = 5
+position = Vector2(12416, 4640)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("9_l4wr6")
+
+[node name="Sign2" type="Sprite2D" parent="." unique_id=1120178558]
+z_index = 5
+position = Vector2(27352.002, 10392.002)
+rotation = -0.2617994
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("9_l4wr6")
+
+[node name="Sign3" type="Sprite2D" parent="." unique_id=745398664]
+z_index = 5
+position = Vector2(40360, 14232)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("9_l4wr6")

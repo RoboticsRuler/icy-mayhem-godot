@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dv42g50734peo"]
+[gd_scene format=3 uid="uid://djrqwym6wex6w"]
 
-[ext_resource type="Script" uid="uid://cf56pgdx4yc0v" path="res://scripts/pause_menu.gd" id="1_kukqi"]
+[ext_resource type="Script" uid="uid://devhjwi4ctb10" path="res://scripts/pause_menu.gd" id="1_kukqi"]
 [ext_resource type="FontFile" uid="uid://c4tovgvqkv3mn" path="res://assets/misc/Papernotes Sketch.ttf" id="1_myx47"]
 [ext_resource type="Shader" uid="uid://8gijwig1lwnp" path="res://assets/misc/blur_tint.gdshader" id="2_5d2l8"]
 [ext_resource type="FontFile" uid="uid://c2icmyk3kdg2c" path="res://assets/misc/Papernotes.ttf" id="2_kukqi"]

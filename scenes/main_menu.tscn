@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5sqx7m2rxcst"]
 
-[ext_resource type="Script" uid="uid://c50hj1actt5u4" path="res://scripts/main_menu.gd" id="1_uxlcg"]
+[ext_resource type="Script" uid="uid://xbri4s2x3s8d" path="res://scripts/main_menu.gd" id="1_uxlcg"]
 [ext_resource type="PackedScene" uid="uid://dafwsey1ych76" path="res://scenes/background.tscn" id="2_wu84c"]
 [ext_resource type="FontFile" uid="uid://c4tovgvqkv3mn" path="res://assets/misc/Papernotes Sketch.ttf" id="3_wu84c"]
 [ext_resource type="FontFile" uid="uid://c2icmyk3kdg2c" path="res://assets/misc/Papernotes.ttf" id="4_8ln24"]
@@ -96,16 +96,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_dxl65")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g6q5s")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_k7a68")
 text = "Quit"
-
-[node name="KillCounter" type="Label" parent="." unique_id=640810474]
-offset_left = 64.0
-offset_top = 1272.0
-offset_right = 384.0
-offset_bottom = 1376.0
-theme_override_fonts/font = ExtResource("4_8ln24")
-theme_override_font_sizes/font_size = 110
-text = "Kills: 0"
-vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer2/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer2/VBoxContainer/Options" to="." method="_on_options_pressed"]

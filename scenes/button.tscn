@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://mw4xckcdj22m"]
+[gd_scene format=3 uid="uid://cet067uopa1y4"]
 
 [ext_resource type="Texture2D" uid="uid://nwdc1vwmmnrs" path="res://assets/art/button.png" id="1_mi6dp"]
 [ext_resource type="Script" uid="uid://3inmc6156582" path="res://scripts/button.gd" id="1_rhj8v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0vvm8"]
-size = Vector2(80, 24)
+size = Vector2(406, 24)
 
 [node name="Button" type="Area2D" unique_id=1322701791 groups=["Button"]]
 script = ExtResource("1_rhj8v")

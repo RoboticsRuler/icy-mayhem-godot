@@ -2,7 +2,14 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
+
+func _process(_delta: float) -> void:
+# Unpause game with escape key
+	if Input.is_action_just_pressed("exit"):
+		get_tree().paused = false
+		Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+		queue_free()
 
 func _on_resume_pressed() -> void:
 	get_tree().paused = false

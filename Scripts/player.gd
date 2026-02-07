@@ -1,8 +1,9 @@
 extends RigidBody2D
 
-var jump_velocity = -600
 var is_on_ground
 var can_finish_lvl = false
+var is_button_pressed
+var can_press_button
 var interactable: Area2D = null
 
 # Called when the node enters the scene tree for the first time.
@@ -14,7 +15,7 @@ func _process(delta: float) -> void:
 
 	# Dive
 	if Input.is_action_pressed("dive") and not is_on_ground:
-		linear_velocity.y += 12
+		apply_central_impulse(Vector2(0, 1.5))
 
 	# Exit level
 	if Input.is_action_just_pressed("exit"):
@@ -29,29 +30,43 @@ func _process(delta: float) -> void:
 		LevelData.enemies_killed += 1
 
 	# Interact with button
-	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Button"):
+	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Button") and can_press_button: 
 		interactable.activate()
 		LevelData.buttons_activated += 1
+		is_button_pressed = true
+		can_press_button = false
 
 	# Get player's rotation input
 	var rotation_dir = Input.get_axis("left", "right")
 
 	# Rotate sled when player is in air and gives input
 	if not is_on_ground and rotation_dir:
-		angular_velocity += rotation_dir * delta * 3.5
+		angular_velocity += rotation_dir * delta * 4
 	elif is_on_ground:
 		pass
 
 	# Detect ground collision with GroundDetector1
 	if $GroundDetector1.is_colliding():
 		is_on_ground = true
-	elif not $GroundDetector2.is_colliding():
+	elif not $GroundDetector2.is_colliding() and not $GroundDetector3.is_colliding() and not $GroundDetector4.is_colliding():
 		is_on_ground = false
 
 	# Detect ground collision with GroundDetector2
 	if $GroundDetector2.is_colliding():
 		is_on_ground = true
-	elif not $GroundDetector1.is_colliding():
+	elif not $GroundDetector1.is_colliding() and not $GroundDetector3.is_colliding() and not $GroundDetector4.is_colliding():
+		is_on_ground = false
+
+	# Detect ground collision with GroundDetector3
+	if $GroundDetector3.is_colliding():
+		is_on_ground = true
+	elif not $GroundDetector1.is_colliding() and not $GroundDetector2.is_colliding() and not $GroundDetector4.is_colliding():
+		is_on_ground = false
+
+	# Detect ground collision with GroundDetector4
+	if $GroundDetector4.is_colliding():
+		is_on_ground = true
+	elif not $GroundDetector1.is_colliding() and not $GroundDetector2.is_colliding() and not $GroundDetector3.is_colliding():
 		is_on_ground = false
 
 	if LevelData.buttons_activated == 3:
@@ -60,7 +75,7 @@ func _process(delta: float) -> void:
 		can_finish_lvl = false
 
 # Detect if player lands on their head
-func _on_head_detection_area_entered(area: Area2D) -> void:
+func _on_death_detection_area_entered(area: Area2D) -> void:
 # Player dies if they land on their head
 	if area.is_in_group("Ice"):
 		get_tree().paused = true
@@ -68,21 +83,20 @@ func _on_head_detection_area_entered(area: Area2D) -> void:
 		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
-# Detect if player is not on ground
-func _on_ground_detection_area_exited(area: Area2D) -> void:
-	if area.is_in_group("Ice"):
-		is_on_ground = false
-
 # Interaction entrance detection
 func _on_interact_detection_area_entered(area: Area2D) -> void:
 	interactable = area
+	is_button_pressed = false
+	can_press_button = true
 
 	# If player enters a tutorial trigger, slow down time
 	if area.is_in_group("Tutorial Trigger"):
 		Engine.time_scale = 0.1
 
 	if area.is_in_group("Deathzone"):
-		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+		get_tree().paused = true
+		var go_scene = load("res://scenes/game_over.tscn").instantiate()
+		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 	# Enter safehouse if player is able to
@@ -102,3 +116,9 @@ func _on_interact_detection_area_exited(area: Area2D) -> void:
 	# If player leaves a tutorial trigger, reset time speed
 	if area.is_in_group("Tutorial Trigger"):
 		Engine.time_scale = 1
+
+	if area.is_in_group("Button") and is_button_pressed == false:
+		get_tree().paused = true
+		var go_scene = load("res://scenes/game_over.tscn").instantiate()
+		get_tree().root.add_child(go_scene)
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
