@@ -484,41 +484,41 @@ color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 
 [node name="ColorRect25" type="ColorRect" parent="Ice2" unique_id=305576517]
 offset_left = 12034.0
-offset_top = 5064.41
-offset_right = 12362.41
-offset_bottom = 5776.5024
+offset_top = 4990.229
+offset_right = 12288.229
+offset_bottom = 5702.3213
 rotation = -1.5707964
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 
 [node name="ColorRect26" type="ColorRect" parent="Ice2" unique_id=39331329]
 offset_left = 12744.0
-offset_top = 5064.0
-offset_right = 13072.41
-offset_bottom = 5776.0923
+offset_top = 5004.0845
+offset_right = 13012.494
+offset_bottom = 5716.177
 rotation = -1.5707964
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 
 [node name="ColorRect27" type="ColorRect" parent="Ice2" unique_id=811408205]
-offset_left = 13432.001
-offset_top = 5056.0
-offset_right = 13760.411
-offset_bottom = 5768.0923
+offset_left = 13418.435
+offset_top = 5005.372
+offset_right = 13694.431
+offset_bottom = 5717.4644
 rotation = -1.8325958
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 
 [node name="ColorRect28" type="ColorRect" parent="Ice2" unique_id=1363864344]
-offset_left = 14096.0
-offset_top = 4880.0
-offset_right = 14424.41
-offset_bottom = 5592.0923
+offset_left = 14083.479
+offset_top = 4833.2686
+offset_right = 14363.509
+offset_bottom = 5545.361
 rotation = -1.8325958
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 
 [node name="ColorRect29" type="ColorRect" parent="Ice2" unique_id=1895940201]
-offset_left = 14680.0
-offset_top = 4724.0005
-offset_right = 15008.41
-offset_bottom = 5436.093
+offset_left = 14665.6455
+offset_top = 4699.1377
+offset_right = 14965.347
+offset_bottom = 5411.23
 rotation = -2.0943952
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 
@@ -1053,35 +1053,35 @@ color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 [node name="ColorRect96" type="ColorRect" parent="Ice2" unique_id=1254860647]
 offset_left = 43648.0
 offset_top = 13312.0
-offset_right = 44296.0
+offset_right = 43968.0
 offset_bottom = 14024.092
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 
 [node name="ColorRect97" type="ColorRect" parent="Ice2" unique_id=1693284408]
 offset_left = 43648.0
 offset_top = 12792.0
-offset_right = 44296.0
+offset_right = 43968.0
 offset_bottom = 13504.092
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 
 [node name="ColorRect98" type="ColorRect" parent="Ice2" unique_id=1667369574]
 offset_left = 28744.0
 offset_top = 9560.0
-offset_right = 29392.0
+offset_right = 29056.0
 offset_bottom = 10272.092
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 
 [node name="ColorRect99" type="ColorRect" parent="Ice2" unique_id=1283188564]
 offset_left = 28744.0
 offset_top = 9040.0
-offset_right = 29392.0
+offset_right = 29056.0
 offset_bottom = 9752.092
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 
 [node name="ColorRect100" type="ColorRect" parent="Ice2" unique_id=135669030]
 offset_left = 9624.001
 offset_top = 4136.0
-offset_right = 10272.001
+offset_right = 10008.564
 offset_bottom = 4848.092
 rotation = -0.7853982
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
@@ -1089,7 +1089,7 @@ color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 [node name="ColorRect101" type="ColorRect" parent="Ice2" unique_id=1552887950]
 offset_left = 9128.001
 offset_top = 3640.0
-offset_right = 9776.001
+offset_right = 9515.899
 offset_bottom = 4352.092
 rotation = -0.7853982
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
@@ -1097,7 +1097,7 @@ color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 [node name="ColorRect102" type="ColorRect" parent="Ice2" unique_id=992020696]
 offset_left = 8648.001
 offset_top = 3440.0
-offset_right = 9296.001
+offset_right = 9097.1
 offset_bottom = 4152.092
 rotation = -1.0471976
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
@@ -1105,7 +1105,7 @@ color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 [node name="ColorRect103" type="ColorRect" parent="Ice2" unique_id=1822850980]
 offset_left = 8192.0
 offset_top = 3184.0
-offset_right = 8840.0
+offset_right = 8647.602
 offset_bottom = 3896.0918
 rotation = -1.0471976
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
