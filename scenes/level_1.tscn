@@ -41,7 +41,7 @@ script = ExtResource("1_chwpn")
 
 [node name="Player" parent="." unique_id=1014737346 instance=ExtResource("1_lsmp6")]
 z_index = 10
-position = Vector2(42015.97, 15893.36)
+position = Vector2(0, 48)
 rotation = 0.2617994
 scale = Vector2(0.99999994, 0.99999994)
 
@@ -712,10 +712,10 @@ offset_bottom = 17468.367
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 
 [node name="ColorRect61" type="ColorRect" parent="Ice2" unique_id=1524331897]
-offset_left = 45438.973
-offset_top = 16899.031
-offset_right = 46810.438
-offset_bottom = 17621.398
+offset_left = 45131.79
+offset_top = 17206.215
+offset_right = 46937.68
+offset_bottom = 17928.582
 rotation = -0.7853982
 color = Color(0.7294118, 0.8392157, 0.9764706, 1)
 
