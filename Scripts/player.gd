@@ -81,7 +81,7 @@ func _on_death_detection_area_entered(area: Area2D) -> void:
 # Player dies if they land on their head
 	if area.is_in_group("Ice"):
 		get_tree().paused = true
-		LevelData.buttons_activated -= 3
+		LevelData.buttons_activated = 0
 		LevelData.enemies_killed = 0
 		var go_scene = load("res://scenes/game_over.tscn").instantiate()
 		get_tree().root.add_child(go_scene)
