@@ -48,9 +48,6 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="Enemy" parent="." unique_id=2090358676 instance=ExtResource("2_xrdnt")]
 position = Vector2(39838.008, 16695)
 
-[node name="Enemy2" parent="." unique_id=1683576974 instance=ExtResource("2_xrdnt")]
-position = Vector2(641.93, 212.4)
-
 [node name="Safehouse" parent="." unique_id=1020140978 instance=ExtResource("3_wrinw")]
 position = Vector2(45266.07, 16642.07)
 
@@ -1006,7 +1003,7 @@ scale = Vector2(3.8400002, 1)
 [node name="Sign" type="Sprite2D" parent="Signs" unique_id=466965069]
 z_index = 5
 position = Vector2(20272, 9576)
-rotation = 0.2617994
+rotation = 0.5235988
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("12_go7sj")
 
