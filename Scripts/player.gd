@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 
 	# Kill enemy
 	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Enemy"):
-		interactable.queue_free()
+		interactable.activate()
 		LevelData.enemies_killed += 1
 		CounterController.update_ui_text()
 
