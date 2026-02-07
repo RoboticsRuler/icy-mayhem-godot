@@ -56,7 +56,7 @@ z_index = -1
 offset_left = -1184.0
 offset_top = -1400.0
 offset_right = 46600.0
-offset_bottom = 17064.0
+offset_bottom = 17506.0
 color = Color(0.33333334, 0.34901962, 0.4392157, 1)
 
 [node name="Ice" type="Node" parent="." unique_id=534667345]
