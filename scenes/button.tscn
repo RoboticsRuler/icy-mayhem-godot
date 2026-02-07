@@ -9,10 +9,10 @@ size = Vector2(406, 24)
 [node name="Button" type="Area2D" unique_id=1322701791 groups=["Button"]]
 script = ExtResource("1_rhj8v")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2118539216]
+shape = SubResource("RectangleShape2D_0vvm8")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1410328896]
 position = Vector2(0, -32.39)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_mi6dp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2118539216]
-shape = SubResource("RectangleShape2D_0vvm8")

@@ -89,9 +89,13 @@ func _on_death_detection_area_entered(area: Area2D) -> void:
 
 # Interaction entrance detection
 func _on_interact_detection_area_entered(area: Area2D) -> void:
-	interactable = area
-	is_button_pressed = false
-	can_press_button = true
+	if area == interactable:
+		interactable = null
+	
+	if area.is_in_group("Button") or area.is_in_group("Enemy"):
+		interactable = area
+		is_button_pressed = false
+		can_press_button = true
 
 	# If player enters a tutorial trigger, slow down time
 	if area.is_in_group("Tutorial Trigger"):
@@ -105,7 +109,7 @@ func _on_interact_detection_area_entered(area: Area2D) -> void:
 
 	# Enter safehouse if player is able to
 	if area.is_in_group("Safehouse") and can_finish_lvl:
-		get_tree().call_deferred("change_scene_to_file", "res://scenes/main_menu.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://scenes/you_win.tscn")
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	elif area.is_in_group("Safehouse") and not can_finish_lvl:
 		get_tree().paused = true
@@ -115,7 +119,8 @@ func _on_interact_detection_area_entered(area: Area2D) -> void:
 
 # Interaction exiting detection
 func _on_interact_detection_area_exited(area: Area2D) -> void:
-	interactable = null
+	if area == interactable:
+		interactable = null
 
 	# If player leaves a tutorial trigger, reset time speed
 	if area.is_in_group("Tutorial Trigger"):

@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://dnotcduedbb6f"]
 
-[ext_resource type="Script" uid="uid://cnn3rqmv23d6o" path="res://Scripts/start_1.gd" id="1_chwpn"]
-[ext_resource type="PackedScene" uid="uid://bebsjigdnt12x" path="res://Scenes/player.tscn" id="1_lsmp6"]
-[ext_resource type="PackedScene" uid="uid://cu0nhrlejvxn8" path="res://Scenes/enemy.tscn" id="2_xrdnt"]
-[ext_resource type="PackedScene" uid="uid://vc7w62ktrh6n" path="res://Scenes/safehouse.tscn" id="3_wrinw"]
-[ext_resource type="PackedScene" uid="uid://bsexagohl76q" path="res://Scenes/ice.tscn" id="4_chwpn"]
+[ext_resource type="Script" uid="uid://cnn3rqmv23d6o" path="res://scripts/start_1.gd" id="1_chwpn"]
+[ext_resource type="PackedScene" uid="uid://bebsjigdnt12x" path="res://scenes/player.tscn" id="1_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://cu0nhrlejvxn8" path="res://scenes/enemy.tscn" id="2_xrdnt"]
+[ext_resource type="PackedScene" uid="uid://vc7w62ktrh6n" path="res://scenes/safehouse.tscn" id="3_wrinw"]
+[ext_resource type="PackedScene" uid="uid://bsexagohl76q" path="res://scenes/ice.tscn" id="4_chwpn"]
 [ext_resource type="Texture2D" uid="uid://beqptwo1ufhtj" path="res://assets/art/particle.png" id="5_af3po"]
-[ext_resource type="PackedScene" uid="uid://dneiw8unh562m" path="res://Scenes/tutorial_trigger.tscn" id="7_6r07y"]
-[ext_resource type="PackedScene" uid="uid://cet067uopa1y4" path="res://Scenes/button.tscn" id="7_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://dneiw8unh562m" path="res://scenes/tutorial_trigger.tscn" id="7_6r07y"]
+[ext_resource type="PackedScene" uid="uid://cet067uopa1y4" path="res://scenes/button.tscn" id="7_lsmp6"]
 [ext_resource type="FontFile" uid="uid://c2icmyk3kdg2c" path="res://assets/misc/Papernotes.ttf" id="8_7gny6"]
 [ext_resource type="Texture2D" uid="uid://c5uhoa5yeou17" path="res://assets/art/medium_tree.png" id="8_15mv3"]
 [ext_resource type="Texture2D" uid="uid://cbub0wrytms20" path="res://assets/art/large_tree.png" id="9_e3sih"]
-[ext_resource type="PackedScene" uid="uid://cp8g6d86vvnjs" path="res://Scenes/deathzone.tscn" id="11_af3po"]
+[ext_resource type="PackedScene" uid="uid://cp8g6d86vvnjs" path="res://scenes/deathzone.tscn" id="11_af3po"]
 [ext_resource type="Texture2D" uid="uid://dvh8b80wmkn6j" path="res://assets/art/sign.png" id="12_go7sj"]
 
 [sub_resource type="Curve" id="Curve_8gbba"]
@@ -41,7 +41,7 @@ script = ExtResource("1_chwpn")
 
 [node name="Player" parent="." unique_id=1014737346 instance=ExtResource("1_lsmp6")]
 z_index = 10
-position = Vector2(0, 48)
+position = Vector2(42015.97, 15893.36)
 rotation = 0.2617994
 scale = Vector2(0.99999994, 0.99999994)
 
@@ -857,7 +857,7 @@ position = Vector2(4712, 1828)
 position = Vector2(22624, 10212)
 
 [node name="Button3" parent="Buttons" unique_id=1483863189 instance=ExtResource("7_lsmp6")]
-position = Vector2(44482.07, 16702.07)
+position = Vector2(44483, 16702)
 
 [node name="Tutorials" type="Node" parent="." unique_id=651988572]
 
