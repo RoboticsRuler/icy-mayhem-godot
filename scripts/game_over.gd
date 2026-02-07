@@ -7,6 +7,7 @@ func _on_restart_pressed() -> void:
 	get_tree().paused = false
 	get_tree().reload_current_scene()
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	LevelData.buttons_activated -= 3
 	queue_free()
 	
 func _on_exit_pressed() -> void:
