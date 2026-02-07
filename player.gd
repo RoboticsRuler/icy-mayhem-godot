@@ -4,6 +4,8 @@ var is_on_ground
 var can_finish_lvl = false
 var is_button_pressed
 var can_press_button
+var is_enemy_dead
+var can_kill_enemy
 var interactable: Area2D = null
 
 # Called when the node enters the scene tree for the first time.
@@ -25,10 +27,12 @@ func _process(delta: float) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 	# Kill enemy
-	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Enemy"):
+	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Enemy") and can_kill_enemy:
 		interactable.activate()
 		LevelData.enemies_killed += 1
 		CounterController.update_ui_text()
+		is_enemy_dead = true
+		can_kill_enemy = false
 
 	# Interact with button
 	if not interactable == null and Input.is_action_just_pressed("interact") and interactable.is_in_group("Button") and can_press_button: 
@@ -96,6 +100,8 @@ func _on_interact_detection_area_entered(area: Area2D) -> void:
 		interactable = area
 		is_button_pressed = false
 		can_press_button = true
+		is_enemy_dead = false
+		can_kill_enemy = true
 
 	# If player enters a tutorial trigger, slow down time
 	if area.is_in_group("Tutorial Trigger"):
