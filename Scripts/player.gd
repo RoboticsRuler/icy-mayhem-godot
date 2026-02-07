@@ -82,6 +82,8 @@ func _on_death_detection_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Ice"):
 		get_tree().paused = true
 		var go_scene = load("res://scenes/game_over.tscn").instantiate()
+		LevelData.buttons_activated == 0
+		LevelData.enemies_killed == 0
 		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
