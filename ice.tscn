@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://efqltw8plwwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo4ri"]
+size = Vector2(128, 128)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tttf6"]
+friction = 0.02
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tttf6"]
+size = Vector2(128, 128)
+
+[node name="Ice" type="Area2D" unique_id=1317599937 groups=["Ice"]]
+scale = Vector2(9.600002, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2107224081]
+shape = SubResource("RectangleShape2D_mo4ri")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=448180450]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+color = Color(0.7294118, 0.8392157, 0.9764706, 1)
+
+[node name="Collider" type="StaticBody2D" parent="." unique_id=1588155837]
+physics_material_override = SubResource("PhysicsMaterial_tttf6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collider" unique_id=499120494]
+shape = SubResource("RectangleShape2D_tttf6")
