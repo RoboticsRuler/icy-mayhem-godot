@@ -7,7 +7,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func load_level(level_path: String) -> void:
@@ -16,18 +16,16 @@ func load_level(level_path: String) -> void:
 	get_tree().change_scene_to_file(level_path)
 
 func _on_next_pressed() -> void:
-	var current_path = get_tree().current_scene.scene_file_path
-	
-	var current_level_num = current_path.to_int() 
-	var next_level_num = current_level_num + 1
-	
-	var next_level_path = "res://scenes/level_" + str(next_level_num) + ".tscn"
-	
-	if FileAccess.file_exists(next_level_path):
-		load_level(next_level_path)
-	else:
-		# If no more levels, return to main menu or a win screen
+	# If there is another level, then go to the next one
+	if not LevelData.next_level == "none":
+		load_level(str(LevelData.next_level))
+		LevelData.buttons_activated = 0
+		LevelData.enemies_killed = 0
+	# If there is not another level, then go to the main menu
+	elif LevelData.next_level == "none":
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		LevelData.buttons_activated = 0
+		LevelData.enemies_killed = 0
 
 
 func _on_exit_pressed() -> void:

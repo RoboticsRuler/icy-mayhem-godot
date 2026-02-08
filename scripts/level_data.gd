@@ -3,6 +3,7 @@ extends Node
 var buttons_activated = 0
 var enemies_killed = 0
 var current_level: String
+var next_level: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

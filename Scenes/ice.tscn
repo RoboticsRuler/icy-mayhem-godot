@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bsexagohl76q"]
+[gd_scene format=3 uid="uid://koao2gvnsnow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mo4ri"]
 size = Vector2(128, 128)
@@ -20,7 +20,7 @@ offset_left = -64.0
 offset_top = -64.0
 offset_right = 64.0
 offset_bottom = 64.0
-color = Color(0.7294118, 0.8392157, 0.9764706, 1)
+color = Color(0.67058825, 0.81960785, 0.9529412, 1)
 
 [node name="Collider" type="StaticBody2D" parent="." unique_id=1588155837]
 physics_material_override = SubResource("PhysicsMaterial_tttf6")
