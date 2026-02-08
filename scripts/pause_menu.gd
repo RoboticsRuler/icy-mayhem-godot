@@ -7,16 +7,19 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 # Unpause game with escape key
 	if Input.is_action_just_pressed("exit"):
+		SfxManager.play_sfx(preload("res://assets/sounds/ui_click.wav"))
 		get_tree().paused = false
 		Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 		queue_free()
 
 func _on_resume_pressed() -> void:
+	SfxManager.play_sfx(preload("res://assets/sounds/ui_click.wav"))
 	get_tree().paused = false
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	queue_free()
 
 func _on_restart_pressed() -> void:
+	SfxManager.play_sfx(preload("res://assets/sounds/ui_click.wav"))
 	get_tree().paused = false
 	get_tree().reload_current_scene()
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
@@ -26,6 +29,7 @@ func _on_restart_pressed() -> void:
 	queue_free()
 
 func _on_exit_pressed() -> void:
+	SfxManager.play_sfx(preload("res://assets/sounds/ui_click.wav"))
 	get_tree().paused = false
 	LevelData.buttons_activated = 0
 	LevelData.enemies_killed = 0

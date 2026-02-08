@@ -39,6 +39,7 @@ func _process(delta: float) -> void:
 		interactable.activate()
 		LevelData.buttons_activated += 1
 		CounterController.update_ui_text()
+		SfxManager.play_sfx(preload("res://assets/sounds/button_click.wav"))
 		is_button_pressed = true
 		can_press_button = false
 
@@ -87,6 +88,7 @@ func _on_death_detection_area_entered(area: Area2D) -> void:
 		get_tree().paused = true
 		LevelData.buttons_activated = 0
 		LevelData.enemies_killed = 0
+		SfxManager.play_sfx(preload("res://assets/sounds/game_over.wav"))
 		var go_scene = load("res://scenes/game_over.tscn").instantiate()
 		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -109,6 +111,7 @@ func _on_interact_detection_area_entered(area: Area2D) -> void:
 
 	if area.is_in_group("Deathzone"):
 		get_tree().paused = true
+		SfxManager.play_sfx(preload("res://assets/sounds/game_over.wav"))
 		var go_scene = load("res://scenes/game_over.tscn").instantiate()
 		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -119,6 +122,7 @@ func _on_interact_detection_area_entered(area: Area2D) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	elif area.is_in_group("Safehouse") and not can_finish_lvl:
 		get_tree().paused = true
+		SfxManager.play_sfx(preload("res://assets/sounds/game_over.wav"))
 		var go_scene = load("res://scenes/game_over.tscn").instantiate()
 		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -134,6 +138,7 @@ func _on_interact_detection_area_exited(area: Area2D) -> void:
 
 	if area.is_in_group("Button") and is_button_pressed == false:
 		get_tree().paused = true
+		SfxManager.play_sfx(preload("res://assets/sounds/game_over.wav"))
 		var go_scene = load("res://scenes/game_over.tscn").instantiate()
 		get_tree().root.add_child(go_scene)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

@@ -23,9 +23,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Display" type="Label" parent="." unique_id=1849076302]
 offset_left = 552.0
-offset_top = 528.0
+offset_top = 643.5
 offset_right = 2008.0
-offset_bottom = 687.0
+offset_bottom = 802.5
 theme_override_fonts/font = ExtResource("3_1sggn")
 theme_override_font_sizes/font_size = 80
 text = "I couldn't figure out how to make settings, so you'll

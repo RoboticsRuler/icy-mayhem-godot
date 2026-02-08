@@ -10,9 +10,11 @@ func _on_restart_pressed() -> void:
 	LevelData.buttons_activated = 0
 	LevelData.enemies_killed = 0
 	CounterController.update_ui_text()
+	SfxManager.play_sfx(preload("res://assets/sounds/ui_click.wav"))
 	queue_free()
 	
 func _on_exit_pressed() -> void:
 	get_tree().paused = false
+	SfxManager.play_sfx(preload("res://assets/sounds/ui_click.wav"))
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 	queue_free()

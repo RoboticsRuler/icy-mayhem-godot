@@ -17,10 +17,11 @@ config/icon="uid://crdnxafjhkkum"
 
 [autoload]
 
-LevelData="*uid://bmx1ud7qlxd2p"
 Counters="*uid://bqdnd61hf48kq"
 CounterController="*uid://b3h4wqe37xrni"
 GlobalAudioStreamPlayer="*uid://4w4btphwd42y"
+LevelData="*uid://5q4ojpauy5p"
+SfxManager="*uid://lv8u1jxhb8hd"
 
 [display]
 
@@ -67,3 +68,4 @@ exit={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
